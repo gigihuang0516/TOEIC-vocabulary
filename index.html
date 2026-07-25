@@ -46,6 +46,24 @@
       </dic>
     </section>
   </main>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+         apiKey: "AIzaSyATuWC6kSepIHBvUSrucgkkL0YYY8hMaic",
+         authDomain: "toeic-words-88095.firebaseapp.com",
+         projectId: "toeic-words-88095",
+         storageBucket: "toeic-words-88095.firebasestorage.app",
+         messagingSenderId: "371967383806",
+         appId: "1:371967383806:web:02ceaa49fde88d2688edaf",
+         measurementId: "G-966C528372"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const googleProvider = new firebase.auth.GoogleAuthProvider();
+</script>
 </body>
 </html>
         
