@@ -1,0 +1,22 @@
+[
+  {
+    "topic_id": "recruitment",
+    "topic_title": "招募、面試與聘僱",
+    "description": "包含職缺公告，面試流程與聘僱合約相關詞彙",
+    "words": [
+      {
+        "word": "resume",
+        "pos": "n.",
+        "phonetic": "[rɛzʊmɛ]",
+        "definition": "履歷表",
+        "example_en": "Applicants are required to submit an updated resume along with three professional references.",
+        "example_zh": "應徵者須提交最新版本的履歷表以及三份專業推薦人資料。",
+        "collocations": [
+          "submit a resume（遞交履歷）",
+          "updated resume（最新履歷）",
+          "tailor a resume（量身打造履歷）"
+        ]
+      }
+    ]
+  }
+]
