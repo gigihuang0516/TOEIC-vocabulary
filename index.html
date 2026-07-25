@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TOEIC 多益主題單字庫</title>
+</head>
+<body>
+  <header>
+    <h1>TOEIC 多益主題單字庫</h1>
+    <div id="auth-container">
+      <button id="login-btn"></button>
+    </div>
+    <button id="back-btn" style="display:none;"></button>
+  </header>
+  
+  <main>    
+      <section id="topic-view"> 
+        <h2>選擇主學習題</h2>
+        <div id="topic-list">
+        </div>
+      </section>
+
+      <section id="word-list-view" style="display: none;">
+        <h2 id="current-topic-title">主題名稱</h2>
+        <div id="word-list">
+        </div>
+      </section>
+
+    <section id="word-detail-view" style="display: none;">
+      <dic class="detail-card">
+        <button id="close-detail-btn">✕ 關閉詳細業</button>
+        <h2 id="detail-word">Word</h2>
+        <p><strong id="detail-pos">pos</strong><span id="detail-phonetic">[phonetic]</span>
+</p>
+        <p id="detail-def">中文解釋</p>
+        <hr>
+        <h3>例句</h3>
+        <p id="detail-ex-en">Example sentence.</p>
+        <p id="detail_ex-zh">例句中文翻譯。</p>
+        <hr>
+        <h3> 常見搭配詞</h3>
+        <ul id="detail-collocations">
+            <!--JavaScript 將動態插入搭配詞列表-->
+        </ul>
+      </dic>
+    </section>
+  </main>
+</body>
+</html>
+        
