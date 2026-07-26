@@ -32,9 +32,9 @@ fetch('words.json')
             `;
 
             // 點擊主題時的動作
-            card.addEventListener('click', () => {
-                alert(`你點擊了主題: ${topic.topic_title}`);
-            });
+               card.addEventListener('click', () => {
+                  showWordList(topic);
+               });
 
             topicList.appendChild(card);
         });
