@@ -177,3 +177,17 @@ function toggleFavorite(word) {
         }
     });
 }
+// 4. 檢查這個單字是否已經被使用者收藏
+const user = auth.currentUser;
+const detailFavBtn = document.getElementById('detail-fav-btn');
+
+if (user) {
+    const favRef = database.ref(`users/${user.uid}/favorites/${wordObj.word}`);
+    favRef.once('value').then((snapshot) => {
+        // 如果資料庫裡有資料就顯示 ❤️，沒有就顯示 ♡
+        detailFavBtn.innerText = snapshot.exists() ? '❤️' : '♡';
+    });
+} else {
+    // 未登入時預設顯示 ♡
+    detailFavBtn.innerText = '♡';
+}
