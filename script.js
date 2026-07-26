@@ -91,6 +91,8 @@ function showWordList(topic) {
         // 點擊單字卡片時，開啟單字詳細資料
         wordCard.addEventListener('click', () => {
             showWordDetail(wordObj);
+            document.getElementById('word-list-view').style.display = 'none';
+            document.getElementById('word-detail-view').style.display = 'block';
         });
 
         wordList.appendChild(wordCard);
@@ -143,6 +145,8 @@ const detailFavBtn = document.getElementById('detail-fav-btn');
 detailFavBtn.onclick = () => {
     // 取得目前詳細頁面顯示的英文單字
     const currentWord = document.getElementById('detail-word').innerText;
+    document.getElementById('word-detail-view').style.display = 'none';
+    document.getElementById('word-list-view').style.display = 'block';
     
     // 呼叫切換收藏狀態的函式
     toggleFavorite(currentWord);
