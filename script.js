@@ -142,6 +142,7 @@ const detailFavBtn = document.getElementById('detail-fav-btn');
 // 2. 綁定點擊事件
 detailFavBtn.onclick = () => {
     // 取得目前詳細頁面顯示的英文單字
+    console.log("點擊愛心按鈕成功！"); // 🧪 測試這行是否有印出來
     const currentWord = document.getElementById('detail-word').innerText;
     
     // 呼叫切換收藏狀態的函式
