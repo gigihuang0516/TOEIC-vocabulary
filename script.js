@@ -118,7 +118,9 @@ function showWordDetail(wordObj) {
         li.innerText = item;
         colList.appendChild(li);
     });
-
+    document.getElementById('word-list-view').style.display = 'none';
+    document.getElementById('word-detail-view').style.display = 'block';
+}
     // 顯示詳細頁面
     document.getElementById('word-detail-view').style.display = 'block';
 }
