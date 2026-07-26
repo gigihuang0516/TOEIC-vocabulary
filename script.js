@@ -92,7 +92,6 @@ function showWordList(topic) {
             <h3>${wordObj.word}</h3>
             <p>${wordObj.definition}</p>
         `;
-
         // 加上點擊事件
         wordCard.addEventListener('click', () => {
             showWordDetail(wordObj);
