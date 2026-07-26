@@ -147,3 +147,29 @@ detailFavBtn.onclick = () => {
     // 呼叫切換收藏狀態的函式
     toggleFavorite(currentWord);
 };
+// 🗂️ 切換單字收藏狀態
+function toggleFavorite(word) {
+    const user = auth.currentUser;
+
+    if (!user) {
+        alert("請先登入 Google 帳號才能使用收藏功能喔！");
+        return;
+    }
+
+    const favRef = database.ref(`users/${user.uid}/favorites/${word}`);
+    const detailFavBtn = document.getElementById('detail-fav-btn');
+
+    favRef.once('value').then((snapshot) => {
+        if (snapshot.exists()) {
+            // ❌ 取消收藏：從資料庫移除，按鈕切換為「黑線空心 ♡」
+            favRef.remove().then(() => {
+                if (detailFavBtn) detailFavBtn.innerText = '♡';
+            });
+        } else {
+            // ❤️ 新增收藏：寫入資料庫，按鈕切換為「紅色實心 ❤️」
+            favRef.set(true).then(() => {
+                if (detailFavBtn) detailFavBtn.innerText = '❤️';
+            });
+        }
+    });
+}
