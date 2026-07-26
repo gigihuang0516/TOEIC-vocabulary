@@ -36,4 +36,4 @@ fetch('word.josn')
             topicList.appendChild(card);
          });
      });
-     .catch(error => console.error('抓取資料失敗 : ',error));
+     .catch(error => console.error('抓取資料失敗：', error));
