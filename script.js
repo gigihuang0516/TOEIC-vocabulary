@@ -3,6 +3,7 @@ const loginBtn = document.getElementById('login-btn');
 
 // 2.監聽使用者的登入狀態變化
 auth.onAuthStateChanged((user) => {
+    console.log("目前登入狀態：", user);
     if (user) {
         // 已登入狀態
         // 1. 更新按鈕顯示內容（顯示名字與頭像）
