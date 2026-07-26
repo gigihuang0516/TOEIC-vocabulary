@@ -1,9 +1,8 @@
 // 1. 取得頁面上的「Google 登入按鈕」
 const loginBtn = document.getElementById('login-btn');
 
-// 2. 為按鈕加上點擊事件監聽器（Event Listener）
+// 2. 為按鈕加上點擊事件監聽器
 loginBtn.addEventListener('click', () => {
-    // 呼叫 Firebase 的 Google 彈出視窗登入功能
     auth.signInWithPopup(googleProvider)
         .then((result) => {
             const user = result.user;
@@ -22,7 +21,7 @@ fetch('words.json')
     .then(data => { 
         const topicList = document.getElementById('topic-list');
 
-        // 渲染主題
+        // 渲染主題卡片
         data.forEach(topic => {
             const card = document.createElement('div');
             card.className = 'topic-card';
@@ -31,28 +30,29 @@ fetch('words.json')
                 <p>${topic.description}</p>
             `;
 
-            // 點擊主題時的動作
-               card.addEventListener('click', () => {
-                  showWordList(topic);
-               });
+            // 點擊主題時，切換到該主題的單字列表
+            card.addEventListener('click', () => {
+                showWordList(topic);
+            });
 
             topicList.appendChild(card);
         });
     })
     .catch(error => console.error('抓取資料失敗：', error));
-// 顯示單字列表頁面的函數
+
+// 4. 顯示單字列表頁面的函式
 function showWordList(topic) {
     const topicView = document.getElementById('topic-view');
     const wordListView = document.getElementById('word-list-view');
 
-    // 1. 切換顯示狀態
+    // 切換顯示狀態
     topicView.style.display = 'none';
     wordListView.style.display = 'block';
 
-    // 2. 更新標題
+    // 更新主題標題
     document.getElementById('current_topic_title').innerText = topic.topic_title;
 
-    // 3. 渲染單字清單
+    // 清空並渲染單字清單
     const wordList = document.getElementById('word-list');
     wordList.innerHTML = '';
 
@@ -64,39 +64,36 @@ function showWordList(topic) {
             <h3>${wordObj.word}</h3>
             <p>${wordObj.definition}</p>
         `;
-        
-        wordList.appendChild(wordCard);
-    });
-}
-// 顯示單字詳細資料的函數
-function showWordList(topic) {
-    const topicView = document.getElementById('topic-view');
-    const wordListView = document.getElementById('word-list-view');
 
-    // 1. 切換顯示狀態
-    topicView.style.display = 'none';
-    wordListView.style.display = 'block';
-
-    // 2. 更新標題
-    document.getElementById('current_topic_title').innerText = topic.topic_title;
-
-    // 3. 渲染單字清單
-    const wordList = document.getElementById('word-list');
-    wordList.innerHTML = '';
-
-    topic.words.forEach(wordObj => {
-        const wordCard = document.createElement('div');
-        wordCard.className = 'word-card';
-
-        wordCard.innerHTML = `
-            <h3>${wordObj.word}</h3>
-            <p>${wordObj.definition}</p>
-        `;
-        // 加上點擊事件
+        // 點擊單字卡片時，開啟單字詳細資料
         wordCard.addEventListener('click', () => {
             showWordDetail(wordObj);
         });
 
         wordList.appendChild(wordCard);
     });
+}
+
+// 5. 顯示單字詳細資料頁面的函式
+function showWordDetail(wordObj) {
+    // 填入文字資料
+    document.getElementById('detail-word').innerText = wordObj.word;
+    document.getElementById('detail-pos').innerText = wordObj.pos;
+    document.getElementById('detail-phonetic').innerText = wordObj.phonetic;
+    document.getElementById('detail-def').innerText = wordObj.definition;
+    document.getElementById('detail_ex_en').innerText = wordObj.example_en;
+    document.getElementById('detail_ex_zh').innerText = wordObj.example_zh;
+
+    // 清空並渲染搭配詞清單
+    const colList = document.getElementById('detail-collocations');
+    colList.innerHTML = '';
+
+    wordObj.collocations.forEach(item => {
+        const li = document.createElement('li');
+        li.innerText = item;
+        colList.appendChild(li);
+    });
+
+    // 顯示詳細頁面
+    document.getElementById('word-detail-view').style.display = 'block';
 }
