@@ -15,62 +15,66 @@
   </header>
   
   <main>    
-      <section id="topic-view"> 
-        <h2>選擇主學習題</h2>
-        <div id="topic-list">
-        </div>
-      </section>
+    <section id="topic-view"> 
+      <h2>選擇主學習題</h2>
+      <div id="topic-list"></div>
+    </section>
 
-      <section id="word-list-view" style="display: none;">
-        <button id="back-to-topic-btn">返回主題列表</button>
-        <h2 id="current_topic_title">主題名稱</h2>
-        <div id="word-list">
-        </div>
-      </section>
+    <section id="word-list-view" style="display: none;">
+      <button id="back-to-topic-btn">返回主題列表</button>
+      <h2 id="current_topic_title">主題名稱</h2>
+      <div id="word-list"></div>
+    </section>
 
     <section id="word-detail-view" style="display: none;">
-     <div class="detail-card">
-     <button id="close-detail-btn">✕ 關閉詳細頁</button>
-       <div class="word-header">
-      <button id="detail-fav-btn" class="fav-btn">❤️</button>
-        <h2 id="detail-word">Word</h2>
-        <p><strong id="detail-pos">pos</strong><span id="detail-phonetic">[phonetic]</span></p>
+      <div class="detail-card">
+        <button id="close-detail-btn">✕ 關閉詳細頁</button>
+        
+        <!-- 📦 單字標題與收藏按鈕容器 -->
+        <div class="word-header">
+          <h2 id="detail-word">Word</h2>
+          <button id="detail-fav-btn" class="fav-btn">🤍</button>
         </div>
+
+        <p><strong id="detail-pos">pos</strong> <span id="detail-phonetic">[phonetic]</span></p>
         <p id="detail-def">中文解釋</p>
         <hr>
         <h3>例句</h3>
         <p id="detail_ex_en">Example sentence.</p>
         <p id="detail_ex_zh">例句中文翻譯。</p>
         <hr>
-        <h3> 常見搭配詞</h3>
+        <h3>常見搭配詞</h3>
         <ul id="detail-collocations">
-            <!--JavaScript 將動態插入搭配詞列表-->
+            <!-- JavaScript 將動態插入搭配詞列表 -->
         </ul>
-      </dic>
+      </div> <!-- 修正：原本是 </dic> -->
     </section>
   </main>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
 
-<script>
-  const firebaseConfig = {
-         apiKey: "AIzaSyATuWC6kSepIHBvUSrucgkkL0YYY8hMaic",
-         authDomain: "toeic-words-88095.firebaseapp.com",
-         projectId: "toeic-words-88095",
-         storageBucket: "toeic-words-88095.firebasestorage.app",
-         messagingSenderId: "371967383806",
-         appId: "1:371967383806:web:02ceaa49fde88d2688edaf",
-         measurementId: "G-966C528372"
-  };
+  <!-- 1. Firebase SDK 基礎套件 -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
 
-  firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-        const googleProvider = new firebase.auth.GoogleAuthProvider();
-  <!-- 引入 Realtime Database 套件 -->
-</script>
-<script src="script.js"></script>
-<!-- 引入 Realtime Database 套件 -->
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <!-- 2. 初始化 Firebase -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyATuWC6kSepIHBvUSrucgkkL0YYY8hMaic",
+      authDomain: "toeic-words-88095.firebaseapp.com",
+      projectId: "toeic-words-88095",
+      storageBucket: "toeic-words-88095.firebasestorage.app",
+      messagingSenderId: "371967383806",
+      appId: "1:371967383806:web:02ceaa49fde88d2688edaf",
+      measurementId: "G-966C528372"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const database = firebase.database(); // 初始化資料庫
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
+  </script>
+
+  <!-- 3. 最後才引入自己的主程式碼 -->
+  <script src="script.js"></script>
 </body>
 </html>
-        
