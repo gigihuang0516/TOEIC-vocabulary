@@ -109,3 +109,4 @@ topic.words.forEach(wordObj => {
 
     wordList.appendChild(wordCard);
 });
+}
