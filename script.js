@@ -51,7 +51,7 @@ function showWordList(topic) {
     document.getElementByld('current_topic_title').innerText = 
 topic.topic_title;
 // 3. 渲染單字清單
-    const.wordList = document.getElementByld('word-list');
+    const wordList = document.getElementByld('word-list');
     wordList.innerHTML = '';
 
     topic.words.forEach(wordObj => {
