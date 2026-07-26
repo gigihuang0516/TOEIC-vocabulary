@@ -1,24 +1,40 @@
 // 1. 取得頁面上的「Google 登入按鈕」
 const loginBtn = document.getElementById('login-btn');
 
-// 2. 為按鈕加上點擊事件監聽器
-loginBtn.addEventListener('click', () => {
-    auth.signInWithPopup(googleProvider)
-        .then((result) => {
-            const user = result.user;
-            alert(`登入成功！歡迎 ${user.displayName}`);
+// 2.監聽使用者的登入狀態變化
+auth.onAuthStateChanged((user) => {
+    if (user) {
+        // 已登入狀態
+        // 1. 更新按鈕顯示內容（顯示名字與頭像）
+        loginBtn.innerHTML = `
+            <img src="${user.photoURL}" style="width:24px; height:24px; border-radius:50%;">
+            ${user.displayName} (登出)
+        `;
 
-            // ☁️ 在 Firestore 的 'users' 集合中建立/更新該使用者的文件
-            db.collection('users').doc(user.uid).set({
-                name: user.displayName,
-                email: user.email,
-                lastLogin: new Date()
-            }, { merge: true });
-            
-        })
-        .catch((error) => {
-            console.error('登入失敗：', error);
+        // 2. 點擊按鈕改為執行「登出」
+        loginBtn.onclick = () => {
+            auth.signOut().then(() => {
+                alert("已成功登出！");
+            });
+        };
+
+        // 3. 順便同步/更新 Realtime Database 資料
+        database.ref('users/' + user.uid).update({
+            name: user.displayName,
+            email: user.email,
+            lastLogin: new Date().toISOString()
         });
+
+    } else {
+        //  未登入狀態
+        // 1. 恢復按鈕原本的文字
+        loginBtn.innerHTML = ' 使用 Google 帳號登入';
+
+        // 2. 點擊按鈕執行「登入」
+        loginBtn.onclick = () => {
+            auth.signInWithPopup(googleProvider);
+        };
+    }
 });
 
 // 3. 讀取 words.json 資料並顯示主題
