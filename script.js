@@ -15,3 +15,25 @@ loginBtn.addEventListener('click', () => {
             alert('登入失敗，請確認 Firebase 設定或稍後再試！');
         });
 });
+// 3. 讀取 word.json 資料並顯示主題
+fetch('word.josn')
+     .then(response => response.json())
+     .then(data => { 
+         const topicList =doucument.getElementById('topic-list');
+
+         //渲染主題
+         data.forEach(topic =>{
+             const card = document.createElement('div');
+             card.className = 'topic-card';
+             card.innerHTML = `
+                <h3>${topic.topic-title}</h3>
+                <p>${topic.descripttion}</p>
+            `;
+             //點擊主題時的動作
+            card.addEventListener('click', () => {
+                alert(`你點擊了主題:${topic.topic-title}`);
+            });
+            topicList.appendChild(card);
+         });
+     });
+     .catch(error => console.error('抓取資料失敗 : ',error)); ˇ
