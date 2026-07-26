@@ -136,3 +136,14 @@ backToTopicBtn.addEventListener('click', () => {
     document.getElementById('word-list-view').style.display = 'none';
     document.getElementById('topic-view').style.display = 'block';
 });
+// 1. 取得詳細頁面的收藏按鈕
+const detailFavBtn = document.getElementById('detail-fav-btn');
+
+// 2. 綁定點擊事件
+detailFavBtn.onclick = () => {
+    // 取得目前詳細頁面顯示的英文單字
+    const currentWord = document.getElementById('detail-word').innerText;
+    
+    // 呼叫切換收藏狀態的函式
+    toggleFavorite(currentWord);
+};
