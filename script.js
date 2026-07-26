@@ -40,17 +40,19 @@ fetch('words.json')
         });
     })
     .catch(error => console.error('抓取資料失敗：', error));
+// 顯示單字列表頁面的函數
 function showWordList(topic) {
     const topicView = document.getElementById('topic-view');
-    const wordListView = document.getElemetById('word-list-view');
+    const wordListView = document.getElementById('word-list-view');
 
-// 1. 切換顯示狀態
+    // 1. 切換顯示狀態
     topicView.style.display = 'none';
     wordListView.style.display = 'block';
-// 2. 更新標題
-    document.getElementById('current_topic_title').innerText = 
-topic.topic_title;
-// 3. 渲染單字清單
+
+    // 2. 更新標題
+    document.getElementById('current_topic_title').innerText = topic.topic_title;
+
+    // 3. 渲染單字清單
     const wordList = document.getElementById('word-list');
     wordList.innerHTML = '';
 
@@ -59,9 +61,10 @@ topic.topic_title;
         wordCard.className = 'word-card';
 
         wordCard.innerHTML = `
-           <h3>${wordObj.word}</h3>
-           <p>${wordObj.definition}</p>
+            <h3>${wordObj.word}</h3>
+            <p>${wordObj.definition}</p>
         `;
+        
         wordList.appendChild(wordCard);
     });
 }
