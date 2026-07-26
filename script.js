@@ -105,3 +105,10 @@ backBtn.addEventListener('click', () => {
     document.getElementById('word-detail-view').style.display = 'none';
     document.getElementById('word-list-view').style.display = 'block';
 });
+const backBtn = document.getElementById('back-to-list-btn');
+
+backBtn.addEventListener('click', () => {
+    console.log('按鈕有被點擊到！'); // 👈 新增這行印出訊息
+    document.getElementById('word-detail-view').style.display = 'none';
+    document.getElementById('word-list-view').style.display = 'block';
+});
