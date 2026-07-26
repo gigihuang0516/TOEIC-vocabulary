@@ -97,3 +97,11 @@ function showWordDetail(wordObj) {
     // 顯示詳細頁面
     document.getElementById('word-detail-view').style.display = 'block';
 }
+// 取得返回按鈕
+const backBtn = document.getElementById('back-to-list-btn');
+
+// 加上點擊事件監聽器 🖱️
+backBtn.addEventListener('click', () => {
+    document.getElementById('word-detail-view').style.display = 'none';
+    document.getElementById('word-list-view').style.display = 'block';
+});
