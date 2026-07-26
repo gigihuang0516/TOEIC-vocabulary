@@ -74,9 +74,9 @@ function showWordDetail(wordObj){
     document.getElementById('detail-word').innerText = wordObj.word;
     document.getElementById('detail-pos').innerText = wordObj.pos;
     document.getElementById('detail-phonetic').innerText = wordObj.phonetic;
-    document.getElementById('detail-definition').innerText = wordObj.definition;
-    document.getElementById('detail-example_en').innerText = wordObj.example_en;
-    document.getElementById('detail-example_zh').innerText = wordObj.example_zh;
+    document.getElementById('detail-def').innerText = wordObj.def;
+    document.getElementById('detail-ex_en').innerText = wordObj.ex_en;
+    document.getElementById('detail-ex_zh').innerText = wordObj.ex_zh;
 
     // 2. 清空並渲染搭配詞(collocations)陣列
     const colList = document.getElementById('detail-collocations');
@@ -88,7 +88,7 @@ function showWordDetail(wordObj){
         colList.appendChild(li);
     });
     // 3. 顯示詳細頁面
-    document.getElementById('word-detail-view').style.display = /block/;
+    document.getElementById('word-detail-view').style.display = 'block';
 }
 topic.words.forEach(wordObj => {
     const wordCard = document.createElement('div');
@@ -103,5 +103,5 @@ topic.words.forEach(wordObj => {
     wordCard.addEventListener('click', () => {
         showWordDetail(wordObj);
     });
-    wordList.appendChild(wordObj):
+    wordList.appendChild(wordObj);
 });
