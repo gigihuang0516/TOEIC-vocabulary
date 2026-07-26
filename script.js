@@ -68,3 +68,40 @@ function showWordList(topic) {
         wordList.appendChild(wordCard);
     });
 }
+// 顯示單字詳細資料的函數
+function showWordDetail(wordObj){
+    // 1. 填入基本文字資訊
+    document.getElementById('detail-word').innerText = wordObj.word;
+    document.getElementById('detail-pos').innerText = wordObj.pos;
+    document.getElementById('detail-phonetic').innerText = wordObj.phonetic;
+    document.getElementById('detail-definition').innerText = wordObj.definition;
+    document.getElementById('detail-example_en').innerText = wordObj.example_en;
+    document.getElementById('detail-example_zh').innerText = wordObj.example_zh;
+
+    // 2. 清空並渲染搭配詞(collocations)陣列
+    const colList = document.getElementById('detail-collocations');
+    colList.innerHTML ='';
+
+    wordObj.collocations.forEach(item => {
+        const li = document.createElement('li');
+        li.innerText = item;
+        colList.appendChild(li);
+    });
+    // 3. 顯示詳細頁面
+    document.getElementById('word-detail-view').style.display = /block/;
+}
+topic.words.forEach(wordObj => {
+    const wordCard = document.createElement('div');
+    wordCard.className = 'word-card';
+
+    wordCard.innerHTML = `
+        <h3>${wordObj.word}</h3>
+        <p>${wordObj.definition}</p>
+    `;
+
+    //加上點擊事件
+    wordCard.addEventListener('click', () => {
+        showWordDetail(wordObj);
+    });
+    wordList.appendChild(wordObj):
+});
