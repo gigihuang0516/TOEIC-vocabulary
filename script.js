@@ -7,11 +7,17 @@ loginBtn.addEventListener('click', () => {
         .then((result) => {
             const user = result.user;
             alert(`登入成功！歡迎 ${user.displayName}`);
-            console.log('使用者資料：', user);
+
+            // ☁️ 在 Firestore 的 'users' 集合中建立/更新該使用者的文件
+            db.collection('users').doc(user.uid).set({
+                name: user.displayName,
+                email: user.email,
+                lastLogin: new Date()
+            }, { merge: true });
+            
         })
         .catch((error) => {
             console.error('登入失敗：', error);
-            alert('登入失敗，請確認 Firebase 設定或稍後再試！');
         });
 });
 
