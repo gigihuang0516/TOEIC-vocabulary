@@ -20,21 +20,23 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>TOEIC 多益主題單字庫</h1>
-    <div id="auth-container">
-      <button id="login-btn">使用google登入</button>
-      <!-- 💖 我的收藏按鈕放在 header 裡面 -->
-      <button id="nav-fav-btn">💖 我的收藏</button>
+  <!-- 🌟 新的首頁全螢幕容器 -->
+  <div id="hero-screen">
+    <div class="hero-content">
+      <!-- 1. 白色花紋與主標題文字 -->
+      <!-- 我們用 CSS 裝飾來達成花紋效果，這裡只放文字 -->
+      <div class="title-container">
+        <h1>TOEIC 多益主題單字庫</h1>
+      </div>
+
+      <!-- 2. 按鈕區塊 (維持你原本的 ID，方便 JS 控制) -->
+      <div id="auth-container">
+        <button id="login-btn">登入google帳號</button>
+        <button id="start-btn">選擇主題</button> <!-- 加一個 ID，方便 JS 控制切換 -->
+        <button id="nav-fav-btn">我的收藏</button>
+      </div>
     </div>
-    <button id="back-btn" style="display:none;"></button>
-  </header>
-  
-  <main>    
-    <section id="topic-view"> 
-      <h2>選擇主學習題</h2>
-      <div id="topic-list"></div>
-    </section>
+  </div>
 
     <section id="word-list-view" style="display: none;">
       <button id="back-to-topic-btn">返回主題列表</button>
@@ -44,7 +46,6 @@
 
     <section id="favorites-view" style="display: none;">
       <button id="back-from-fav-btn">⬅️ 返回</button>
-      <h2>💖 我的收藏單字</h2>
       <div id="favorites-list" class="word-list"></div>
     </section>
 
