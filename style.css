@@ -121,3 +121,15 @@ button:hover {
 button:active {
   transform: scale(0.98); /* 點擊時輕微凹陷感 */
 }
+.word-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
