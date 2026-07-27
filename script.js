@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('抓取資料失敗：', error));
 
-    // 4. 首頁「選擇主題」按鈕綁定 🚀
+    // 4. 首頁按鈕綁定 🚀
     const startBtn = document.getElementById('start-btn');
     if (startBtn) {
         startBtn.addEventListener('click', () => {
@@ -76,7 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 返回首頁按鈕
+    const navFavBtn = document.getElementById('nav-fav-btn');
+    if (navFavBtn) {
+        navFavBtn.addEventListener('click', () => {
+            showFavorites();
+        });
+    }
+
+    // 5. 各頁面返回按鈕（修復切換邏輯！） 🔙
+    // 主題頁面的返回 ➔ 回到首頁 (hero-screen)
     const backToHomeBtn = document.getElementById('back-to-home-btn');
     if (backToHomeBtn) {
         backToHomeBtn.addEventListener('click', () => {
@@ -85,22 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. 導覽按鈕點擊事件 🔘
-    const navFavBtn = document.getElementById('nav-fav-btn');
-    if (navFavBtn) {
-        navFavBtn.addEventListener('click', () => {
-            showFavorites();
-        });
-    }
-
+    // 收藏頁面的返回 ➔ 回到首頁 (hero-screen)
     const backFromFavBtn = document.getElementById('back-from-fav-btn');
     if (backFromFavBtn) {
         backFromFavBtn.addEventListener('click', () => {
             hideAllViews();
-            showElement('topic-view');
+            showElement('hero-screen'); 
         });
     }
 
+    // 單字清單頁面的返回 ➔ 回到主題頁面
     const backToTopicBtn = document.getElementById('back-to-topic-btn');
     if (backToTopicBtn) {
         backToTopicBtn.addEventListener('click', () => {
@@ -109,14 +111,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 單字詳細頁面的關閉 ➔ 返回上一頁 (來源頁面)
     const closeDetailBtn = document.getElementById('close-detail-btn');
     if (closeDetailBtn) {
         closeDetailBtn.addEventListener('click', () => {
             hideAllViews();
-            showElement(previousView); // 🔙 切換回紀錄的來源頁面
+            showElement(previousView);
         });
     }
 
+    // 詳細頁面的收藏愛心按鈕綁定
     const detailFavBtn = document.getElementById('detail-fav-btn');
     if (detailFavBtn) {
         detailFavBtn.onclick = () => {
@@ -128,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==============================
-// 🛠️ 通用工具函式 (防止 NULL 報錯)
+// 🛠️ 通用工具函式 (切換頁面防呆)
 // ==============================
 function hideAllViews() {
     const views = ['hero-screen', 'topic-view', 'word-list-view', 'favorites-view', 'word-detail-view'];
@@ -157,7 +161,7 @@ function showWordList(topic) {
 
     const wordList = document.getElementById('word-list');
     if (!wordList) return;
-    wordList.innerHTML = ''; // 清空現有清單
+    wordList.innerHTML = ''; 
 
     const user = auth.currentUser;
 
@@ -253,7 +257,7 @@ function loadFavoriteWords() {
     favListContainer.innerHTML = '';
 
     if (!user) {
-        favListContainer.innerHTML = '<p style="text-align:center; padding: 20px;">請先登入帳號以查看收藏喔！</p>';
+        favListContainer.innerHTML = '<p style="text-align:center; padding: 20px; color:#ffffff;">請先登入帳號以查看收藏喔！</p>';
         return;
     }
 
@@ -262,7 +266,7 @@ function loadFavoriteWords() {
         const favWordNames = Object.keys(favData);
 
         if (favWordNames.length === 0) {
-            favListContainer.innerHTML = '<p style="text-align:center; padding: 20px;">目前還沒有收藏任何單字喔！</p>';
+            favListContainer.innerHTML = '<p style="text-align:center; padding: 20px; color:#ffffff;">目前還沒有收藏任何單字喔！</p>';
             return;
         }
 
@@ -297,7 +301,7 @@ function loadFavoriteWords() {
     });
 }
 
-// 收藏狀態切換函式
+// 切換單字詳細頁面的收藏狀態
 function toggleFavorite(word) {
     const user = auth.currentUser;
     if (!user) {
@@ -321,6 +325,7 @@ function toggleFavorite(word) {
     });
 }
 
+// 切換單字列表頁面的收藏狀態
 function toggleListFavorite(word, btnElement) {
     const user = auth.currentUser;
     if (!user) {
