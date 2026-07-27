@@ -17,7 +17,7 @@ body, html {
   height: 100vh; /* 視窗高度 100% */
   width: 100vw;  /* 視窗寬度 100% */
   /* 建議資料夾內的檔名改為英文，如 bg.jpg，避免 GitHub 讀取失敗 */
-  background-image: url('images\bg.png'); 
+  background-image: url('images/bg.png'); 
   background-size: cover; /* 讓圖片覆蓋整個畫面 */
   background-position: center center; /* 背景置中 */
   background-repeat: no-repeat;
@@ -74,7 +74,7 @@ body, html {
 .title-container::before {
   top: -10px;
   /* 建議檔名改為英文，如 ornament.png */
-  background-image: url('images\ornament.png'); 
+  background-image: url('images/ornament.png'); 
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
