@@ -207,3 +207,28 @@ function toggleFavorite(word) {
         }
     });
 }
+// 8. 單字列表專用的收藏切換狀態 🗂️
+function toggleListFavorite(word, btnElement) {
+    const user = auth.currentUser;
+
+    if (!user) {
+        alert("請先登入 Google 帳號才能使用收藏功能喔！");
+        return;
+    }
+
+    const favRef = database.ref(`users/${user.uid}/favorites/${word}`);
+
+    favRef.once('value').then((snapshot) => {
+        if (snapshot.exists()) {
+            // 已存在 -> 移除並變成空心
+            favRef.remove().then(() => {
+                btnElement.innerText = '♡';
+            });
+        } else {
+            // 不存在 -> 新增並變成實心
+            favRef.set(true).then(() => {
+                btnElement.innerText = '❤️';
+            });
+        }
+    });
+}
