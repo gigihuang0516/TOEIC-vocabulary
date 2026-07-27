@@ -1,13 +1,21 @@
 /* ==============================
    1. 全域基礎設定
    ============================== */
-body, html {
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden; /* 讓首頁保持全螢幕，不出現捲軸 */
-  font-family: Arial, sans-serif; /* 統一使用 Arial 字體 */
+  background-color: #000736; /* 確保全網站、滾動到底部都是統一深藍色 */
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+#hero-screen,
+#topic-view,
+#word-list-view,
+#favorites-view,
+#word-detail-view {
+  min-height: 100vh;
+  background-color: #000736; /* 全部頁面統一深藍色 */
+  box-sizing: border-box;
 }
 
 /* ==============================
