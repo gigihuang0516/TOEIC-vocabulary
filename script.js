@@ -144,7 +144,14 @@ function hideAllViews() {
 
 function showElement(id) {
     const el = document.getElementById(id);
-    if (el) el.style.display = 'block';
+    if (!el) return;
+    
+    // ✨ 關鍵修復：如果是首頁，強制恢復為 flex 排版！其他頁面用 block
+    if (id === 'hero-screen') {
+        el.style.display = 'flex';
+    } else {
+        el.style.display = 'block';
+    }
 }
 
 // ==============================
