@@ -1,3 +1,4 @@
+let previousView = 'topic-view'; // 📌 紀錄前一個頁面的 ID，預設為主題列表
 // 1. 取得頁面上的「Google 登入按鈕」
 const loginBtn = document.getElementById('login-btn');
 
@@ -157,12 +158,14 @@ function showWordDetail(wordObj) {
     document.getElementById('word-detail-view').style.display = 'block';
 }
 
-// 6. 按鈕監聽事件（返回與收藏） 🖱️
+// 6. 按鈕監聽事件 🖱️
 const backBtn = document.getElementById('close-detail-btn');
 if (backBtn) {
     backBtn.addEventListener('click', () => {
         document.getElementById('word-detail-view').style.display = 'none';
-        document.getElementById('word-list-view').style.display = 'block';
+        
+        // 🔙 根據紀錄，動態切換回之前的頁面！
+        document.getElementById(previousView).style.display = 'block';
     });
 }
 
