@@ -484,47 +484,50 @@ html, body {
    ========================================== */
 #favorites-view {
   min-height: 100vh;
-  background-color: #000736 !important; /* 統一深藍底色 */
-  padding: 40px 10%;
+  background-color: #000736 !important;
+  padding: 40px 8% !important; /* ✨ 加大左右邊界留白，不再貼邊 */
   box-sizing: border-box;
 }
 
-/* 頂部區域：彈性佈局 (左右對齊) */
+/* 頂部區域：左右對齊 */
 .fav-header {
   display: flex;
-  justify-content: space-between; /* 左邊文字按鈕，右邊書本圖片 */
-  align-items: flex-end;          /* 底部對齊 */
+  justify-content: space-between;
+  align-items: flex-end;
   max-width: 900px;
   margin: 0 auto 30px auto;
 }
 
-/* 左側文字與按鈕區塊 */
 .fav-header-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* 「← 返回」圓角按鈕 */
-#back-from-fav-btn {
+/* 🏆 強制套用圓角膠囊按鈕樣式 */
+button#back-from-fav-btn,
+.capsule-btn {
   background-color: #ffffff !important;
   color: #000736 !important;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 12px;
-  transition: all 0.2s ease;
+  border: none !important;
+  padding: 8px 22px !important;
+  border-radius: 20px !important; /* ✨ 圓角膠囊關鍵 */
+  font-size: 0.95rem !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  margin-bottom: 15px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
 }
 
-#back-from-fav-btn:hover {
+button#back-from-fav-btn:hover,
+.capsule-btn:hover {
   background-color: #cbe3ff !important;
-  transform: scale(1.03);
+  transform: scale(1.05) !important;
 }
 
-/* 大標題 */
+/* 我的收藏大標題 */
 .fav-header-left h2 {
   color: #ffffff !important;
   font-size: 2.8rem;
@@ -533,35 +536,10 @@ html, body {
   letter-spacing: 1px;
 }
 
-/* 右上角書本圖片 */
+/* 右上角書本圖案位置控制 */
 .fav-book-img {
-  width: 110px;        /* 控制書本圖片大小 */
+  width: 110px;
   height: auto;
   object-fit: contain;
-  margin-bottom: 5px;  /* 👈 控制與下方卡片/底線的距離 */
-  margin-right: 10px;  /* 👈 控制離右邊界邊緣的距離 */
-}
-
-/* 收藏列表容器 (垂直單欄) */
-#favorites-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* 📱 手機螢幕調小書本圖片與邊界 */
-@media (max-width: 600px) {
-  #favorites-view {
-    padding: 25px 20px !important;
-  }
-  
-  .fav-book-img {
-    width: 70px; /* 手機上縮小書本 */
-  }
-
-  .fav-header-left h2 {
-    font-size: 2rem;
-  }
+  margin-bottom: 5px; /* 調整與下方的距離 */
 }
