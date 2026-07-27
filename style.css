@@ -273,3 +273,90 @@ body, html {
     transform: none;
   }
 }
+/* ==============================
+   4. 單字列表頁面 (#word-list-view)
+   ============================== */
+#word-list-view {
+  min-height: 100vh;
+  background-color: #000736; /* 統一的深藍色底 */
+  padding: 40px 10%);       /* 兩側留白 10% */
+  box-sizing: border-box;
+}
+
+/* 頂部區域：標題與按鈕靠左對齊 */
+.word-list-header {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  text-align: left; /* 強制靠左 */
+}
+
+.word-list-header h2 {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  letter-spacing: 1px;
+}
+
+/* 白底深字「← 返回主題列表」圓角按鈕 */
+#back-to-topic-btn {
+  background-color: #ffffff;
+  color: #000736;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#back-to-topic-btn:hover {
+  background-color: #cbe3ff;
+  transform: scale(1.03);
+}
+
+/* 單字列表容器 (垂直單欄，寬度與上方對齊) */
+#word-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* 卡片與卡片之間的垂直間距 */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 單字卡片：長條型白底卡片 */
+.word-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.word-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 單字文字樣式 (黑字) */
+.word-card h3 {
+  color: #1a1a1a;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.word-card p {
+  color: #555555;
+  font-size: 1rem;
+}
+
+/* 愛心按鈕樣式 */
+.list-fav-btn {
+  transition: transform 0.2s ease;
+}
+
+.list-fav-btn:hover {
+  transform: scale(1.2);
+}
