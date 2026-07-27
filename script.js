@@ -58,7 +58,6 @@ fetch('words.json')
     .catch(error => console.error('抓取資料失敗：', error));
 
 // 4. 顯示單字列表頁面 📋
-// 4. 顯示單字列表頁面 📋
 function showWordList(topic) {
     const topicView = document.getElementById('topic-view');
     const wordListView = document.getElementById('word-list-view');
