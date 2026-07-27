@@ -538,6 +538,8 @@ html, body {
   width: 110px;        /* 控制書本圖片大小 */
   height: auto;
   object-fit: contain;
+  margin-bottom: 5px;  /* 👈 控制與下方卡片/底線的距離 */
+  margin-right: 10px;  /* 👈 控制離右邊界邊緣的距離 */
 }
 
 /* 收藏列表容器 (垂直單欄) */
