@@ -245,3 +245,52 @@ function showFavorites() {
     // 3. 載入收藏的單字資料
     loadFavoriteWords();
 }
+// 載入並顯示收藏單字的詳細內容 📚
+function loadFavoriteWords() {
+    const user = auth.currentUser;
+    const favListContainer = document.getElementById('favorites-list');
+    favListContainer.innerHTML = ''; // 清空舊內容
+
+    if (!user) return;
+
+    // 1. 先向 Firebase 取得收藏清單
+    database.ref(`users/${user.uid}/favorites`).once('value').then(snapshot => {
+        const favData = snapshot.val() || {};
+        const favWordNames = Object.keys(favData); // 取得所有收藏的單字名稱陣列
+
+        if (favWordNames.length === 0) {
+            favListContainer.innerHTML = '<p>目前還沒有收藏任何單字喔！</p>';
+            return;
+        }
+
+        // 2. 讀取 words.json 進行比對
+        fetch('words.json')
+            .then(res => res.json())
+            .then(data => {
+                // 收集所有主題裡符合收藏名稱的單字
+                const matchedWords = [];
+                data.forEach(topic => {
+                    topic.words.forEach(wordObj => {
+                        if (favWordNames.includes(wordObj.word)) {
+                            matchedWords.push(wordObj);
+                        }
+                    });
+                });
+
+                // 3. 將比對到的單字渲染到頁面上
+                matchedWords.forEach(wordObj => {
+                    const card = document.createElement('div');
+                    card.className = 'word-card';
+                    card.innerHTML = `
+                        <h3>${wordObj.word}</h3>
+                        <p>${wordObj.definition}</p>
+                    `;
+                    // 點擊可以開啟詳細頁面
+                    card.addEventListener('click', () => {
+                        showWordDetail(wordObj);
+                    });
+                    favListContainer.appendChild(card);
+                });
+            });
+    });
+}
