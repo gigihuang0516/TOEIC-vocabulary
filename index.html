@@ -131,16 +131,15 @@
 <section id="favorites-view" style="display: none;">
   <div class="fav-header">
     <div class="fav-header-left">
-      <!-- 1. 返回按鈕 -->
-      <button id="back-from-fav-btn">← 返回</button>
-      <!-- 2. 大標題 -->
+      <!-- 加上 class="capsule-btn" 確保膠囊圓角樣式生效 -->
+      <button id="back-from-fav-btn" class="capsule-btn">← 返回</button>
       <h2>我的收藏單字</h2>
     </div>
-    <!-- 3. 右上角書本插圖 (檔名為 images/book.png) -->
-    <img src="images/book.png" alt="Book Illustration" class="fav-book-img">
+    <!-- 右上角書本圖片 -->
+    <img src="images/book.png" alt="Book" class="fav-book-img">
   </div>
 
-  <!-- 4. 收藏單字卡片列表 -->
+  <!-- 收藏清單容器 -->
   <div id="favorites-list"></div>
 </section>
 
