@@ -152,13 +152,12 @@ function showWordDetail(wordObj) {
         });
     } else if (detailFavBtn) {
         detailFavBtn.innerText = '♡';
-    }
 
     // 🙈 隱藏所有列表頁面，僅顯示詳細頁面
     document.getElementById('word-list-view').style.display = 'none';
     document.getElementById('favorites-view').style.display = 'none';
     document.getElementById('word-detail-view').style.display = 'block';
-}
+        }
 
 // 6. 按鈕監聽事件 🖱️
 const backBtn = document.getElementById('close-detail-btn');
