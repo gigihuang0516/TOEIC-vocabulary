@@ -1,4 +1,6 @@
-let previousView = 'topic-view'; // 📌 紀錄前一個頁面的 ID，預設為主題列表
+// 📌 紀錄前一個頁面的 ID，預設為主題列表
+let previousView = 'topic-view';
+
 // 1. 取得頁面上的「Google 登入按鈕」
 const loginBtn = document.getElementById('login-btn');
 
@@ -62,11 +64,7 @@ fetch('words.json')
 function showWordList(topic) {
     const topicView = document.getElementById('topic-view');
     const wordListView = document.getElementById('word-list-view');
-// 📄 點擊「單字卡片其他區域」時，開啟單字詳細資料
-wordCard.addEventListener('click', () => {
-    previousView = 'word-list-view'; // 📌 1. 紀錄來源為單字列表
-    showWordDetail(wordObj);
-});
+
     topicView.style.display = 'none';
     wordListView.style.display = 'block';
 
@@ -99,17 +97,17 @@ wordCard.addEventListener('click', () => {
             // 🛑 點擊「愛心」時的處理
             const favBtn = wordCard.querySelector('.list-fav-btn');
             favBtn.addEventListener('click', (event) => {
-                // 防止點擊愛心時，觸發到下方卡片的點擊事件 (避免打開詳細頁面)
-                event.stopPropagation(); 
-                
-                // 呼叫列表專用的收藏切換功能
+                event.stopPropagation(); // 防止打開詳細頁面
                 toggleListFavorite(wordObj.word, favBtn);
             });
 
             // 📄 點擊「單字卡片其他區域」時，開啟單字詳細資料
             wordCard.addEventListener('click', () => {
+                previousView = 'word-list-view'; // 📌 紀錄來源為單字列表
                 showWordDetail(wordObj);
             });
+
+            wordList.appendChild(wordCard);
         });
     };
 
@@ -122,6 +120,7 @@ wordCard.addEventListener('click', () => {
         renderCards({});
     }
 }
+
 // 5. 顯示單字詳細頁面 📄
 function showWordDetail(wordObj) {
     // 填入單字與例句內容
@@ -131,10 +130,6 @@ function showWordDetail(wordObj) {
     document.getElementById('detail-def').innerText = wordObj.definition;
     document.getElementById('detail_ex_en').innerText = wordObj.example_en;
     document.getElementById('detail_ex_zh').innerText = wordObj.example_zh;
-    document.getElementById('word-list-view').style.display = 'none';
-    document.getElementById('favorites-view').style.display = 'none';
-    document.getElementById('word-detail-view').style.display = 'block';
-}
 
     // 清空並渲染搭配詞清單
     const colList = document.getElementById('detail-collocations');
@@ -159,8 +154,9 @@ function showWordDetail(wordObj) {
         detailFavBtn.innerText = '♡';
     }
 
-    // 🙈 隱藏單字列表，僅顯示詳細頁面
+    // 🙈 隱藏所有列表頁面，僅顯示詳細頁面
     document.getElementById('word-list-view').style.display = 'none';
+    document.getElementById('favorites-view').style.display = 'none';
     document.getElementById('word-detail-view').style.display = 'block';
 }
 
@@ -191,7 +187,7 @@ if (detailFavBtn) {
     };
 }
 
-// 7. 切換單字收藏狀態 🗂️
+// 7. 切換單字收藏狀態（詳細頁面專用） 🗂️
 function toggleFavorite(word) {
     const user = auth.currentUser;
 
@@ -209,14 +205,13 @@ function toggleFavorite(word) {
                 if (detailFavBtn) detailFavBtn.innerText = '♡';
             });
         } else {
-            
             favRef.set(true).then(() => {
-                // 點擊可以開啟詳細頁面
                 if (detailFavBtn) detailFavBtn.innerText = '❤️';
             });
         }
     });
 }
+
 // 8. 單字列表專用的收藏切換狀態 🗂️
 function toggleListFavorite(word, btnElement) {
     const user = auth.currentUser;
@@ -230,32 +225,29 @@ function toggleListFavorite(word, btnElement) {
 
     favRef.once('value').then((snapshot) => {
         if (snapshot.exists()) {
-            // 已存在 -> 移除並變成空心
             favRef.remove().then(() => {
                 btnElement.innerText = '♡';
             });
         } else {
-            // 不存在 -> 新增並變成實心
             favRef.set(true).then(() => {
                 btnElement.innerText = '❤️';
             });
         }
     });
 }
-// 顯示「我的收藏」頁面 📂
+
+// 9. 顯示「我的收藏」頁面 📂
 function showFavorites() {
-    // 1. 隱藏其他所有視圖
     document.getElementById('topic-view').style.display = 'none';
     document.getElementById('word-list-view').style.display = 'none';
     document.getElementById('word-detail-view').style.display = 'none';
 
-    // 2. 顯示我的收藏頁面
     document.getElementById('favorites-view').style.display = 'block';
 
-    // 3. 載入收藏的單字資料
     loadFavoriteWords();
 }
-// 載入並顯示收藏單字的詳細內容 📚
+
+// 10. 載入並顯示收藏單字的詳細內容 📚
 function loadFavoriteWords() {
     const user = auth.currentUser;
     const favListContainer = document.getElementById('favorites-list');
@@ -263,21 +255,18 @@ function loadFavoriteWords() {
 
     if (!user) return;
 
-    // 1. 先向 Firebase 取得收藏清單
     database.ref(`users/${user.uid}/favorites`).once('value').then(snapshot => {
         const favData = snapshot.val() || {};
-        const favWordNames = Object.keys(favData); // 取得所有收藏的單字名稱陣列
+        const favWordNames = Object.keys(favData);
 
         if (favWordNames.length === 0) {
             favListContainer.innerHTML = '<p>目前還沒有收藏任何單字喔！</p>';
             return;
         }
 
-        // 2. 讀取 words.json 進行比對
         fetch('words.json')
             .then(res => res.json())
             .then(data => {
-                // 收集所有主題裡符合收藏名稱的單字
                 const matchedWords = [];
                 data.forEach(topic => {
                     topic.words.forEach(wordObj => {
@@ -287,7 +276,6 @@ function loadFavoriteWords() {
                     });
                 });
 
-                // 3. 將比對到的單字渲染到頁面上
                 matchedWords.forEach(wordObj => {
                     const card = document.createElement('div');
                     card.className = 'word-card';
@@ -295,23 +283,24 @@ function loadFavoriteWords() {
                         <h3>${wordObj.word}</h3>
                         <p>${wordObj.definition}</p>
                     `;
-                    // 點擊可以開啟詳細頁面
-                    // 📄 點擊「收藏卡片」時，開啟單字詳細資料
-                 card.addEventListener('click', () => {
-                     previousView = 'favorites-view'; // 📌 紀錄來源為我的收藏
-                     showWordDetail(wordObj);
-                });
+                    
+                    // 📄 點擊「收藏卡片」時，開啟單字詳細資料並記錄來源
+                    card.addEventListener('click', () => {
+                        previousView = 'favorites-view'; // 📌 紀錄來源為我的收藏
+                        showWordDetail(wordObj);
+                    });
+
                     favListContainer.appendChild(card);
                 });
             });
     });
 }
-// 「我的收藏」按鈕點擊事件
+
+// 11. 導覽按鈕點擊事件 🔘
 document.getElementById('nav-fav-btn').addEventListener('click', () => {
     showFavorites();
 });
 
-// 「從收藏頁返回」按鈕點擊事件
 document.getElementById('back-from-fav-btn').addEventListener('click', () => {
     document.getElementById('favorites-view').style.display = 'none';
     document.getElementById('topic-view').style.display = 'block';
