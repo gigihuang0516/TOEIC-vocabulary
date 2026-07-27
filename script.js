@@ -253,7 +253,11 @@ function showWordDetail(wordObj) {
 // 顯示「我的收藏」頁面 📂
 function showFavorites() {
     hideAllViews();
-    showElement('favorites-view');
+    
+    // ✨ 關鍵修復：這裡要用 display = 'flex'，不能用 'block'！
+    const favEl = document.getElementById('favorites-view');
+    if (favEl) favEl.style.display = 'flex';
+    
     loadFavoriteWords();
 }
 
