@@ -23,37 +23,49 @@
   <!-- 🌟 新的首頁全螢幕容器 -->
   <div id="hero-screen">
     <div class="hero-content">
-      <!-- 1. 白色花紋與主標題文字 -->
-      <!-- 我們用 CSS 裝飾來達成花紋效果，這裡只放文字 -->
+      <!-- 1. 主標題文字與花紋 -->
       <div class="title-container">
         <h1>TOEIC 多益主題單字庫</h1>
       </div>
 
-      <!-- 2. 按鈕區塊 (維持你原本的 ID，方便 JS 控制) -->
+      <!-- 2. 三個按鈕區塊 -->
       <div id="auth-container">
         <button id="login-btn">登入google帳號</button>
-        <button id="start-btn">選擇主題</button> <!-- 加一個 ID，方便 JS 控制切換 -->
+        <button id="start-btn">選擇主題</button>
         <button id="nav-fav-btn">我的收藏</button>
       </div>
     </div>
   </div>
 
+  <!-- 📦 主要內容區塊包覆 (加上 <main>) -->
+  <main>
+    <!-- 1. 主題列表區塊 (修正缺少的 topic-list 容器) -->
+    <section id="topic-view" style="display: none;"> 
+      <h2>選擇學習主題</h2>
+      <button id="back-to-home-btn">⬅️ 返回首頁</button>
+      <div id="topic-list"></div>
+    </section>
+
+    <!-- 2. 單字列表區塊 -->
     <section id="word-list-view" style="display: none;">
-      <button id="back-to-topic-btn">返回主題列表</button>
+      <button id="back-to-topic-btn">⬅️ 返回主題列表</button>
       <h2 id="current_topic_title">主題名稱</h2>
       <div id="word-list"></div>
     </section>
 
+    <!-- 3. 我的收藏區塊 -->
     <section id="favorites-view" style="display: none;">
       <button id="back-from-fav-btn">⬅️ 返回</button>
+      <h2>💖 我的收藏單字</h2>
       <div id="favorites-list" class="word-list"></div>
     </section>
 
+    <!-- 4. 單字詳細卡片區塊 -->
     <section id="word-detail-view" style="display: none;">
       <div class="detail-card">
         <button id="close-detail-btn">✕ 關閉詳細頁</button>
         
-        <!-- 📦 單字標題與收藏按鈕容器 -->
+        <!-- 單字標題與收藏按鈕 -->
         <div class="word-header">
           <h2 id="detail-word">Word</h2>
           <button id="detail-fav-btn" class="fav-btn">🤍</button>
@@ -68,7 +80,7 @@
         <hr>
         <h3>常見搭配詞</h3>
         <ul id="detail-collocations">
-            <!-- JavaScript 將動態插入搭配詞列表 -->
+          <!-- JavaScript 動態插入搭配詞 -->
         </ul>
       </div>
     </section>
@@ -93,11 +105,11 @@
 
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
-    const database = firebase.database(); // 初始化資料庫
+    const database = firebase.database();
     const googleProvider = new firebase.auth.GoogleAuthProvider();
   </script>
 
-  <!-- 3. 最後才引入自己的主程式碼 -->
+  <!-- 3. 主程式碼 -->
   <script src="script.js"></script>
 </body>
 </html>
