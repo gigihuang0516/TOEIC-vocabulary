@@ -13,14 +13,15 @@ body, html {
 /* ==============================
    2. 全螢幕背景容器
    ============================== */
+/* 首頁容器保持居中 */
 #hero-screen {
   height: 100vh;
   width: 100vw;
-  background-color: #000736; /* 1. 固定底色：深藍色 */
+  background-color: #000736;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;             /* 預設為 flex */
+  justify-content: center;   /* 水平居中 */
+  align-items: center;       /* 垂直居中 */
   overflow: hidden;
 }
 #hero-screen::before {
@@ -39,10 +40,10 @@ body, html {
   z-index: 1;    /* 放在最底層 */
 }
 /* ==============================
-  /* 3. 置中內容容器 (確保文字與按鈕浮在背景圖之上) */
+/* 內容區塊 */
 .hero-content {
   position: relative;
-  z-index: 2;    /* 蓋在背景圖之上，確保文字保持 100% 不透明 */
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
