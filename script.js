@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('抓取資料失敗：', error));
 
-    // 4. 首頁「選擇主題」按鈕綁定 (關鍵修復！點擊後開展主題區) 🚀
+    // 4. 首頁「選擇主題」按鈕綁定 🚀
     const startBtn = document.getElementById('start-btn');
     if (startBtn) {
         startBtn.addEventListener('click', () => {
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 返回首頁按鈕 (如果有的話)
+    // 返回首頁按鈕
     const backToHomeBtn = document.getElementById('back-to-home-btn');
     if (backToHomeBtn) {
         backToHomeBtn.addEventListener('click', () => {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. 導覽按鈕點擊事件 (我的收藏與返回) 🔘
+    // 5. 導覽按鈕點擊事件 🔘
     const navFavBtn = document.getElementById('nav-fav-btn');
     if (navFavBtn) {
         navFavBtn.addEventListener('click', () => {
@@ -274,7 +274,7 @@ function loadFavoriteWords() {
                     topic.words.forEach(wordObj => {
                         if (favWordNames.includes(wordObj.word)) {
                             matchedWords.push(wordObj);
-                        });
+                        }
                     });
                 });
 
