@@ -58,6 +58,7 @@ fetch('words.json')
     .catch(error => console.error('抓取資料失敗：', error));
 
 // 4. 顯示單字列表頁面 📋
+// 4. 顯示單字列表頁面 📋
 function showWordList(topic) {
     const topicView = document.getElementById('topic-view');
     const wordListView = document.getElementById('word-list-view');
@@ -68,25 +69,57 @@ function showWordList(topic) {
     document.getElementById('current_topic_title').innerText = topic.topic_title;
 
     const wordList = document.getElementById('word-list');
-    wordList.innerHTML = '';
+    wordList.innerHTML = ''; // 清空現有清單
 
-    topic.words.forEach(wordObj => {
-        const wordCard = document.createElement('div');
-        wordCard.className = 'word-card';
+    const user = auth.currentUser;
 
-        wordCard.innerHTML = `
-            <h3>${wordObj.word}</h3>
-            <p>${wordObj.definition}</p>
-        `;
+    // 內部渲染函式：拿到收藏資料後，開始產生單字卡片
+    const renderCards = (favorites = {}) => {
+        topic.words.forEach(wordObj => {
+            const wordCard = document.createElement('div');
+            wordCard.className = 'word-card';
+            
+            // 判斷這個單字是否有在收藏名單中
+            const isFavorited = favorites[wordObj.word] ? true : false;
+            const heartIcon = isFavorited ? '❤️' : '♡';
 
-        wordCard.addEventListener('click', () => {
-            showWordDetail(wordObj);
+            // 加上單字、愛心按鈕與解釋 (使用 flex 排版讓愛心靠右)
+            wordCard.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0;">${wordObj.word}</h3>
+                    <span class="list-fav-btn" style="cursor: pointer; font-size: 1.2rem;">${heartIcon}</span>
+                </div>
+                <p style="margin-top: 8px;">${wordObj.definition}</p>
+            `;
+
+            // 🛑 點擊「愛心」時的處理
+            const favBtn = wordCard.querySelector('.list-fav-btn');
+            favBtn.addEventListener('click', (event) => {
+                // 防止點擊愛心時，觸發到下方卡片的點擊事件 (避免打開詳細頁面)
+                event.stopPropagation(); 
+                
+                // 呼叫列表專用的收藏切換功能
+                toggleListFavorite(wordObj.word, favBtn);
+            });
+
+            // 📄 點擊「單字卡片其他區域」時，開啟單字詳細資料
+            wordCard.addEventListener('click', () => {
+                showWordDetail(wordObj);
+            });
+
+            wordList.appendChild(wordCard);
         });
+    };
 
-        wordList.appendChild(wordCard);
-    });
+    // 判斷是否登入：有登入就去抓收藏資料，未登入就直接給空物件 {}
+    if (user) {
+        database.ref(`users/${user.uid}/favorites`).once('value').then(snapshot => {
+            renderCards(snapshot.val() || {});
+        });
+    } else {
+        renderCards({});
+    }
 }
-
 // 5. 顯示單字詳細頁面 📄
 function showWordDetail(wordObj) {
     // 填入單字與例句內容
