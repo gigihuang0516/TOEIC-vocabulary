@@ -485,17 +485,23 @@ html, body {
 #favorites-view {
   min-height: 100vh;
   background-color: #000736 !important;
-  padding: 40px 8% !important; /* ✨ 加大左右邊界留白，不再貼邊 */
+  padding: 40px 10% !important;
   box-sizing: border-box;
+  
+  /* ✨ 關鍵修復：改用 flex 欄位排版，確保內容從最上方開始往下排 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 強制內容從頂部開始對齊，不往下掉 */
 }
 
-/* 頂部區域：左右對齊 */
+/* 頂部 Header 區域 */
 .fav-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  width: 100%;
   max-width: 900px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px auto; /* 與下方單字卡片保持 30px 間距 */
 }
 
 .fav-header-left {
@@ -504,42 +510,12 @@ html, body {
   align-items: flex-start;
 }
 
-/* 🏆 強制套用圓角膠囊按鈕樣式 */
-button#back-from-fav-btn,
-.capsule-btn {
-  background-color: #ffffff !important;
-  color: #000736 !important;
-  border: none !important;
-  padding: 8px 22px !important;
-  border-radius: 20px !important; /* ✨ 圓角膠囊關鍵 */
-  font-size: 0.95rem !important;
-  font-weight: bold !important;
-  cursor: pointer !important;
-  margin-bottom: 15px !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
-  transition: all 0.2s ease !important;
-  outline: none !important;
-}
-
-button#back-from-fav-btn:hover,
-.capsule-btn:hover {
-  background-color: #cbe3ff !important;
-  transform: scale(1.05) !important;
-}
-
-/* 我的收藏大標題 */
-.fav-header-left h2 {
-  color: #ffffff !important;
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-/* 右上角書本圖案位置控制 */
-.fav-book-img {
-  width: 110px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 5px; /* 調整與下方的距離 */
+/* 收藏單字清單容器 (緊接著 Header 往下排) */
+#favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto; /* 居中對齊 */
 }
