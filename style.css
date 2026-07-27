@@ -281,13 +281,13 @@ html, body {
     transform: none;
   }
 }
-/* ==============================
+/* ==========================================
    4. 單字列表頁面 (#word-list-view)
-   ============================== */
+   ========================================== */
 #word-list-view {
   min-height: 100vh;
-  background-color: #000736; /* 統一的深藍色底 */
-  padding: 40px 10%);       /* 兩側留白 10% */
+  background-color: #000736 !important; /* 強制深藍底色 */
+  padding: 40px 10%;
   box-sizing: border-box;
 }
 
@@ -295,21 +295,21 @@ html, body {
 .word-list-header {
   max-width: 900px;
   margin: 0 auto 30px auto;
-  text-align: left; /* 強制靠左 */
+  text-align: left;
 }
 
 .word-list-header h2 {
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 2.8rem;
   font-weight: 800;
   margin: 0 0 15px 0;
   letter-spacing: 1px;
 }
 
-/* 白底深字「← 返回主題列表」圓角按鈕 */
+/* 「← 返回主題列表」按鈕 */
 #back-to-topic-btn {
-  background-color: #ffffff;
-  color: #000736;
+  background-color: #ffffff !important;
+  color: #000736 !important;
   border: none;
   padding: 8px 20px;
   border-radius: 20px;
@@ -320,22 +320,22 @@ html, body {
 }
 
 #back-to-topic-btn:hover {
-  background-color: #cbe3ff;
+  background-color: #cbe3ff !important;
   transform: scale(1.03);
 }
 
-/* 單字列表容器 (垂直單欄，寬度與上方對齊) */
+/* 單字列表容器 (垂直單欄) */
 #word-list {
   display: flex;
   flex-direction: column;
-  gap: 18px; /* 卡片與卡片之間的垂直間距 */
+  gap: 18px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* 單字卡片：長條型白底卡片 */
+/* 長條型白底卡片 */
 .word-card {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   border-radius: 14px;
   padding: 20px 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -348,32 +348,23 @@ html, body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* 單字文字樣式 (黑字) */
 .word-card h3 {
-  color: #1a1a1a;
+  color: #1a1a1a !important;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
 .word-card p {
-  color: #555555;
+  color: #555555 !important;
   font-size: 1rem;
 }
 
-/* 愛心按鈕樣式 */
-.list-fav-btn {
-  transition: transform 0.2s ease;
-}
-
-.list-fav-btn:hover {
-  transform: scale(1.2);
-}
-/* ==============================
+/* ==========================================
    5. 單字詳細頁面 (#word-detail-view)
-   ============================== */
+   ========================================== */
 #word-detail-view {
   min-height: 100vh;
-  background-color: #000736; /* 統一深藍底色 */
+  background-color: #000736 !important; /* 強制深藍底色 */
   padding: 40px 10%;
   box-sizing: border-box;
 }
@@ -387,8 +378,8 @@ html, body {
 
 /* 「X 關閉詳細頁面」按鈕 */
 #close-detail-btn {
-  background-color: #ffffff;
-  color: #000736;
+  background-color: #ffffff !important;
+  color: #000736 !important;
   border: none;
   padding: 8px 18px;
   border-radius: 20px;
@@ -400,13 +391,13 @@ html, body {
 }
 
 #close-detail-btn:hover {
-  background-color: #cbe3ff;
+  background-color: #cbe3ff !important;
   transform: scale(1.03);
 }
 
 /* 單字大標題 */
 #detail-word {
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 3rem;
   font-weight: 800;
   margin: 0;
@@ -415,17 +406,17 @@ html, body {
 
 /* 大面積白色卡片 */
 .detail-card {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   border-radius: 18px;
   padding: 30px 35px;
   max-width: 900px;
   margin: 0 auto;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-  color: #1a1a1a; /* 內部文字黑色 */
+  color: #1a1a1a !important;
 }
 
-/* 詞性與音標標籤 */
+/* 詞性與音標 */
 .detail-meta {
   display: flex;
   align-items: center;
@@ -434,8 +425,8 @@ html, body {
 }
 
 .badge {
-  background-color: #000736;
-  color: #ffffff;
+  background-color: #000736 !important;
+  color: #ffffff !important;
   padding: 4px 12px;
   border-radius: 12px;
   font-size: 0.85rem;
@@ -444,7 +435,7 @@ html, body {
 }
 
 #detail-phonetic {
-  color: #666666;
+  color: #666666 !important;
   font-size: 1.1rem;
   font-style: italic;
 }
@@ -456,7 +447,7 @@ html, body {
 
 .detail-section h4 {
   margin: 0 0 8px 0;
-  color: #000736;
+  color: #000736 !important;
   font-size: 1.1rem;
   border-bottom: 2px solid #f0f0f0;
   padding-bottom: 5px;
@@ -466,24 +457,23 @@ html, body {
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.5;
-  color: #333333;
+  color: #333333 !important;
 }
 
 .ex-en {
   font-weight: 600;
-  color: #111111;
+  color: #111111 !important;
 }
 
 .ex-zh {
-  color: #666666;
+  color: #666666 !important;
   margin-top: 4px !important;
 }
 
-/* 搭配詞列表 */
 #detail-collocations {
   margin: 5px 0 0 20px;
   padding: 0;
-  color: #444444;
+  color: #444444 !important;
 }
 
 #detail-collocations li {
