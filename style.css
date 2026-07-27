@@ -1,16 +1,22 @@
-/* 1. 基礎設定 */
+/* ==============================
+   1. 全域基礎設定
+   ============================== */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   overflow: hidden; /* 讓首頁保持全螢幕，不出現捲軸 */
+  font-family: Arial, sans-serif; /* 統一使用 Arial 字體 */
 }
-/* 2. 全螢幕背景容器 */
+
+/* ==============================
+   2. 全螢幕背景容器
+   ============================== */
 #hero-screen {
   height: 100vh; /* 視窗高度 100% */
-  width: 100vw; /* 視窗寬度 100% */
-  /* 指向你從 Canva 匯出的完整背景圖 */
+  width: 100vw;  /* 視窗寬度 100% */
+  /* 建議資料夾內的檔名改為英文，如 bg.jpg，避免 GitHub 讀取失敗 */
   background-image: url('images/首頁背景.jpg'); 
   background-size: cover; /* 讓圖片覆蓋整個畫面 */
   background-position: center center; /* 背景置中 */
@@ -18,58 +24,64 @@ body, html {
   position: relative;
   display: flex;
   justify-content: center; /* 水平置中 */
-  align-items: center; /* 垂直置中 */
+  align-items: center;    /* 垂直置中 */
 }
-/* 3. 置中內容容器 */
+
+/* ==============================
+   3. 置中內容容器
+   ============================== */
 .hero-content {
   display: flex;
   flex-direction: column; /* 垂直排列標題和按鈕 */
-  align-items: center; /* 水平置中 */
+  align-items: center;    /* 水平置中 */
   text-align: center;
-  max-width: 90%; /* 在手機上留點白 */
+  max-width: 90%;        /* 在手機上留點白 */
 }
+
 /* ==============================
    🔝 主標題文字與白色花紋
    ============================== */
 .title-container {
   position: relative;
-  padding: 20px 0; /* 給花紋留點空間 */
+  padding: 20px 0;    /* 給花紋留點空間 */
   margin-bottom: 50px; /* 與按鈕的距離 */
 }
 
 .title-container h1 {
-  color: #ffffff; /* 白色文字 */
-  font-size: 5rem; /* 字體放大，照設計圖 */
-  font-family: 'SF Pro Display', sans-serif; /* 建議找個專業黑體，如 Poppins */
+  color: #ffffff;      /* 白色文字 */
+  font-size: 5rem;     /* 照設計圖放大字體 */
+  font-family: Arial, sans-serif;
   font-weight: 700;
   margin: 0;
   white-space: nowrap; /* 讓文字不換行 */
-  letter-spacing: -2px; /* 字距微調 */
+  letter-spacing: -2px;/* 字距微調 */
 }
 
 /* 🏆 使用 CSS 生成主標題上下方的古典花紋線條 */
-.title-container::before, .title-container::after {
+.title-container::before, 
+.title-container::after {
   content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; /* 花紋與文字同寬 */
-  max-width: 700px; /* 限制花紋最大寬度 */
-  height: 2px; /* 線條厚度 */
+  width: 100%;       /* 花紋與文字同寬 */
+  max-width: 700px;  /* 限制花紋最大寬度 */
+  height: 2px;       /* 線條厚度 */
   background-color: rgba(255, 255, 255, 0.7); /* 半透明白線 */
 }
 
-/* 上方線條與花紋圖案 (這裡我們用點小技巧，把花紋也匯出成一張透明 PNG) */
+/* 上方線條與花紋圖案 */
 .title-container::before {
   top: -10px;
-  background-image: url('images/首頁花紋.png'); /* 你需要從 Canva 單獨匯出上方的古典花紋圖案 */
+  /* 建議檔名改為英文，如 ornament.png */
+  background-image: url('images/首頁花紋.png'); 
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
   height: 60px; /* 給花紋足夠高度 */
 }
 
-/* 下方線條與圓圈 */
+/* 下方線條 */
 .title-container::after {
   bottom: -10px;
   height: 1px;
@@ -82,43 +94,43 @@ body, html {
 #auth-container {
   display: flex;
   flex-direction: column; /* 垂直堆疊按鈕 */
-  gap: 20px; /* 按鈕之間的垂直距離 */
+  gap: 20px;              /* 按鈕之間的垂直距離 */
   width: 100%;
-  max-width: 450px; /* 限制按鈕區塊最大寬度 */
+  max-width: 450px;       /* 限制按鈕區塊最大寬度 */
 }
 
 #auth-container button {
-  background-color: #c2e1ff ; /* 設計圖上的淺藍色 (#c2e1ff ) */
-  color: #1a1a1a; /* 按鈕文字顏色 (接近純黑) */
-  font-family: 'SF Pro Text', sans-serif;
+  background-color: #c2e1ff; /* 粉藍色 */
+  color: #000000;            /* 上面字的顏色：黑色 */
+  font-family: Arial, sans-serif;
   font-size: 1.6rem;
-  font-weight: 600;
-  border: none; /* 沒有邊框 */
-  border-radius: 12px; /* 更圓潤的圓角 */
-  padding: 18px 40px; /* 照設計圖增加上下 padding */
-  width: 100%; /* 按鈕佔滿容器寬度 */
+  font-weight: bold;
+  border: none;              /* 移除邊框 */
+  border-radius: 12px;       /* 圓角 */
+  padding: 18px 40px;        /* 上下 padding */
+  width: 100%;               /* 按鈕佔滿容器寬度 */
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
   display: flex;
-  justify-content: center; /* 文字居中 */
+  justify-content: center;   /* 文字居中 */
   align-items: center;
 }
 
-/* 按鈕懸浮效果 (讓它看起來更有質感) */
+/* 按鈕懸浮效果 */
 #auth-container button:hover {
   transform: translateY(-3px); /* 向上微浮 */
-  background-color: #e6f3ff; /* 變亮一點 */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* 增加陰影 */
+  background-color: #d8edff;   /* 懸浮時稍微變亮 */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* 陰影 */
 }
 
-/* 💖 針對 Google 登入按鈕做特殊樣式 (如果需要像 Canva 圖上一樣) */
-#login-btn {
-  position: relative;
-}
-
+/* Google 登入按鈕的 Icon 設定（若有圖示檔可取消註解下方 background-image） */
 #login-btn::before {
   content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
+  /* background-image: url('images/google_logo.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
 }
