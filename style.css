@@ -11,33 +11,51 @@ body, html {
 }
 
 /* ==============================
-   2. 全螢幕背景容器
+   2. 全螢幕背景容器 (固定鐵橋背景)
    ============================== */
-/* 首頁容器保持居中 */
 #hero-screen {
   height: 100vh;
   width: 100vw;
-  background-color: #000736;
-  position: relative;
-  display: flex;             /* 預設為 flex */
-  justify-content: center;   /* 水平居中 */
-  align-items: center;       /* 垂直居中 */
-  overflow: hidden;
+  background-color: #000736; /* 固定底色：深藍色 */
+  position: relative;        /* 確保子元素相對於此區塊定位 */
+  display: flex;
+  justify-content: center;   /* 水平置中內容 */
+  align-items: center;       /* 垂直置中內容 */
+  overflow: hidden;          /* 避免圖片或尺寸超出產生捲軸 */
+  box-sizing: border-box;
 }
+
+/* 2. 鐵橋背景圖層 (獨立滿版且絕對釘死) */
 #hero-screen::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
+  
+  /* 指向你的背景圖片 */
   background-image: url('images/bg.png'); 
-  background-size: cover;
-  background-position: center center;
+  background-size: cover;            /* 滿版覆蓋 */
+  background-position: center center;/* 永遠置中對齊 */
   background-repeat: no-repeat;
   
-  opacity: 0.15; /* ✨ 透明度設定為 15% */
-  z-index: 1;    /* 放在最底層 */
+  opacity: 0.15; /* 15% 透明度 */
+  z-index: 1;    /* 釘在底層 */
+  pointer-events: none; /* 避免干擾按鈕點擊 */
+}
+
+/* 3. 置中內容容器 (確保文字與按鈕浮在背景之上) */
+.hero-content {
+  position: relative;
+  z-index: 2; /* 浮在背景圖層之上 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 90%;
 }
 /* ==============================
 /* 內容區塊 */
