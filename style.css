@@ -158,3 +158,118 @@ body, html {
   background-repeat: no-repeat;
   margin-right: 10px;
 }
+/* ==============================
+   3. 選擇主題頁面 (#topic-view)
+   ============================== */
+#topic-view {
+  min-height: 100vh;
+  background-color: #000736;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* 頂部排版 (標題與返回按鈕) */
+.topic-header {
+  position: relative;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.topic-header h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#back-to-home-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  color: #000736;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#back-to-home-btn:hover {
+  background-color: #cbe3ff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* 🏆 自動適應欄數的 2 欄網格 (自動延伸無限格) */
+#topic-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 固定左右雙欄 */
+  gap: 25px 30px;                       /* 卡片上下左右間距 */
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* 🎴 主題卡片基礎樣式 */
+.topic-card {
+  height: 110px;
+  border-radius: 16px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.topic-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.topic-card p {
+  margin: 6px 0 0 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.3;
+}
+
+/* 🎨 循環繽紛色板 (支援無限多張卡片輪流套用顏色) */
+.topic-card:nth-child(6n + 1) { background-color: #ff6f3c; } /* 橘色 */
+.topic-card:nth-child(6n + 2) { background-color: #4a90e2; } /* 藍色 */
+.topic-card:nth-child(6n + 3) { background-color: #2ecc71; } /* 綠色 */
+.topic-card:nth-child(6n + 4) { background-color: #9b59b6; } /* 紫色 */
+.topic-card:nth-child(6n + 5) { background-color: #e67e22; } /* 黃琥珀 */
+.topic-card:nth-child(6n + 0) { background-color: #e84393; } /* 玫瑰粉 */
+
+/* 📱 手機螢幕自動切換為單欄 */
+@media (max-width: 600px) {
+  #topic-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .topic-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  #back-to-home-btn {
+    position: static;
+    transform: none;
+  }
+}
