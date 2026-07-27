@@ -293,3 +293,13 @@ function loadFavoriteWords() {
             });
     });
 }
+// 「我的收藏」按鈕點擊事件
+document.getElementById('nav-fav-btn').addEventListener('click', () => {
+    showFavorites();
+});
+
+// 「從收藏頁返回」按鈕點擊事件
+document.getElementById('back-from-fav-btn').addEventListener('click', () => {
+    document.getElementById('favorites-view').style.display = 'none';
+    document.getElementById('topic-view').style.display = 'block';
+});
