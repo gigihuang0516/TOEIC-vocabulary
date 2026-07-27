@@ -1,64 +1,32 @@
-// 📌 紀錄前一個頁面的 ID，預設為主題列表
-let previousView = 'topic-view';
+// 確保 HTML 載入完成後才執行
+document.addEventListener('DOMContentLoaded', () => {
 
-// 1. 取得頁面上的「Google 登入按鈕」
-const loginBtn = document.getElementById('login-btn');
+  // 1. 抓取各個畫面 (Sections)
+  const heroScreen = document.getElementById('hero-screen');
+  const topicView = document.getElementById('topic-view');
+  const wordListView = document.getElementById('word-list-view');
+  const favoritesView = document.getElementById('favorites-view');
+  const wordDetailView = document.getElementById('word-detail-view');
 
-// 2. 監聽使用者的登入狀態變化 🔐
-auth.onAuthStateChanged((user) => {
-    console.log("目前登入狀態：", user);
-    if (user) {
-        // 已登入狀態：顯示頭像與名字
-        loginBtn.innerHTML = `
-            <img src="${user.photoURL}" style="width:24px; height:24px; border-radius:50%;">
-            ${user.displayName} (登出)
-        `;
+  // 2. 抓取按鈕
+  const startBtn = document.getElementById('start-btn');           // 選擇主題按鈕
+  const navFavBtn = document.getElementById('nav-fav-btn');         // 我的收藏按鈕
+  const backToHomeBtn = document.getElementById('back-to-home-btn');// 返回首頁按鈕
+  const backFromFavBtn = document.getElementById('back-from-fav-btn');
 
-        loginBtn.onclick = () => {
-            auth.signOut().then(() => {
-                alert("已成功登出！");
-            });
-        };
-
-        // 同步使用者資料到 Firebase
-        database.ref('users/' + user.uid).update({
-            name: user.displayName,
-            email: user.email,
-            lastLogin: new Date().toISOString()
-        });
-
-    } else {
-        // 未登入狀態
-        loginBtn.innerHTML = '使用 Google 帳號登入';
-
-        loginBtn.onclick = () => {
-            auth.signInWithPopup(googleProvider);
-        };
+  // 3. 顯示收藏頁面的函式 (加上防呆檢查)
+  function showFavorites() {
+    if (!favoritesView) {
+      console.error("找不到 #favorites-view 元素！請檢查 index.html");
+      return;
     }
-});
-
-// 3. 讀取 words.json 資料並顯示主題 📚
-fetch('words.json')
-    .then(response => response.json())
-    .then(data => { 
-        const topicList = document.getElementById('topic-list');
-
-        data.forEach(topic => {
-            const card = document.createElement('div');
-            card.className = 'topic-card';
-            card.innerHTML = `
-                <h3>${topic.topic_title}</h3>
-                <p>${topic.description}</p>
-            `;
-
-            card.addEventListener('click', () => {
-                showWordList(topic);
-            });
-
-            topicList.appendChild(card);
-        });
-    })
-    .catch(error => console.error('抓取資料失敗：', error));
+    
+    // 隱藏其他畫面，只顯示收藏頁
+    if (heroScreen) heroScreen.style.display = 'none';
+    if (topicView) topicView.style.display = 'none';
+    if (wordListView) wordListView.style.display = 'none';
+    
+    favoritesView.style.display = 'block';
 
 // 4. 顯示單字列表頁面 📋
 function showWordList(topic) {
