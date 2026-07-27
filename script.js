@@ -274,7 +274,7 @@ function loadFavoriteWords() {
                     topic.words.forEach(wordObj => {
                         if (favWordNames.includes(wordObj.word)) {
                             matchedWords.push(wordObj);
-                        }
+                        });
                     });
                 });
 
