@@ -110,11 +110,6 @@ wordCard.addEventListener('click', () => {
             wordCard.addEventListener('click', () => {
                 showWordDetail(wordObj);
             });
-            // 🙈 隱藏列表頁面，僅顯示詳細頁面
-            document.getElementById('word-list-view').style.display = 'none';
-            document.getElementById('favorites-view').style.display = 'none'; // 📌 3. 確保收藏頁面也被隱藏
-            document.getElementById('word-detail-view').style.display = 'block';
-            wordList.appendChild(wordCard);
         });
     };
 
@@ -136,6 +131,10 @@ function showWordDetail(wordObj) {
     document.getElementById('detail-def').innerText = wordObj.definition;
     document.getElementById('detail_ex_en').innerText = wordObj.example_en;
     document.getElementById('detail_ex_zh').innerText = wordObj.example_zh;
+    document.getElementById('word-list-view').style.display = 'none';
+    document.getElementById('favorites-view').style.display = 'none';
+    document.getElementById('word-detail-view').style.display = 'block';
+}
 
     // 清空並渲染搭配詞清單
     const colList = document.getElementById('detail-collocations');
