@@ -232,3 +232,16 @@ function toggleListFavorite(word, btnElement) {
         }
     });
 }
+// 顯示「我的收藏」頁面 📂
+function showFavorites() {
+    // 1. 隱藏其他所有視圖
+    document.getElementById('topic-view').style.display = 'none';
+    document.getElementById('word-list-view').style.display = 'none';
+    document.getElementById('word-detail-view').style.display = 'none';
+
+    // 2. 顯示我的收藏頁面
+    document.getElementById('favorites-view').style.display = 'block';
+
+    // 3. 載入收藏的單字資料
+    loadFavoriteWords();
+}
