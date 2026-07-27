@@ -68,31 +68,48 @@
       <div id="favorites-list" class="word-list"></div>
     </section>
 
-    <!-- 4. 單字詳細卡片區塊 -->
-    <section id="word-detail-view" style="display: none;">
-      <div class="detail-card">
-        <button id="close-detail-btn">✕ 關閉詳細頁</button>
-        
-        <!-- 單字標題與收藏按鈕 -->
-        <div class="word-header">
-          <h2 id="detail-word">Word</h2>
-          <button id="detail-fav-btn" class="fav-btn">🤍</button>
-        </div>
+    <!-- 5. 單字詳細頁面 -->
+<section id="word-detail-view" style="display: none;">
+  <div class="detail-header">
+    <!-- 最上面的關閉按鈕 -->
+    <button id="close-detail-btn">X 關閉詳細頁面</button>
+    <!-- 單字大標題 -->
+    <h2 id="detail-word">單字</h2>
+  </div>
 
-        <p><strong id="detail-pos">pos</strong> <span id="detail-phonetic">[phonetic]</span></p>
-        <p id="detail-def">中文解釋</p>
-        <hr>
-        <h3>例句</h3>
-        <p id="detail_ex_en">Example sentence.</p>
-        <p id="detail_ex_zh">例句中文翻譯。</p>
-        <hr>
-        <h3>常見搭配詞</h3>
-        <ul id="detail-collocations">
-          <!-- JavaScript 動態插入搭配詞 -->
-        </ul>
-      </div>
-    </section>
-  </main>
+  <!-- 下方大面積白色卡片 -->
+  <div class="detail-card">
+    <!-- 右上角愛心收藏按鈕 -->
+    <div style="text-align: right;">
+      <span id="detail-fav-btn" style="cursor: pointer; font-size: 1.8rem;">♡</span>
+    </div>
+
+    <!-- 音標與詞性 -->
+    <div class="detail-meta">
+      <span id="detail-pos" class="badge">pos</span>
+      <span id="detail-phonetic">/phonetic/</span>
+    </div>
+
+    <!-- 中文釋義 -->
+    <div class="detail-section">
+      <h4>中文釋義</h4>
+      <p id="detail-def">定義內容...</p>
+    </div>
+
+    <!-- 例句 -->
+    <div class="detail-section">
+      <h4>例句 Example</h4>
+      <p id="detail_ex_en" class="ex-en">Example sentence...</p>
+      <p id="detail_ex_zh" class="ex-zh">例句翻譯...</p>
+    </div>
+
+    <!-- 搭配詞 -->
+    <div class="detail-section">
+      <h4>常見搭配詞 Collocations</h4>
+      <ul id="detail-collocations"></ul>
+    </div>
+  </div>
+</section>
 
   <!-- 1. Firebase SDK 基礎套件 -->
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
