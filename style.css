@@ -1,56 +1,123 @@
-/* 🌙 全站基礎樣式與深色背景 */
-body {
-  background-color: #121212; /* 深灰近黑色背景 */
-  color: #e0e0e0;            /* 柔和白字，保護眼睛 */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 20px;
+/* ==============================
+   🌟 基礎設定 & 精緻字體
+   ============================== */
+:root {
+  /* 定義精緻質感色調 */
+  --bg-color: #0f172a;        /* 極深藍底，比純黑更有質感 */
+  --card-bg: rgba(30, 41, 59, 0.7); /* 半透明卡片底色 */
+  --text-main: #f1f5f9;       /* 柔和白字 */
+  --text-muted: #94a3b8;      /* 輔助灰字 */
+  --accent-gradient: linear-gradient(135deg, #22d3ee, #0ea5e9); /* 按鈕科技漸層 */
+  --accent-hover: #38bdf8;
+  --border-color: rgba(255, 255, 255, 0.08); /* 超細微邊框 */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
 }
 
-/* 頂部 Header 樣式 */
+* {
+  box-sizing: border-box;
+  /* 平滑所有過渡效果，增加高級感 */
+  transition: all 0.25s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  /* 使用現代感十足的字體 */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 40px 20px; /* 增加四周留白，不擁擠 */
+  display: flex;
+  justify-content: center; /* 讓內容置中 */
+  line-height: 1.6; /* 調整行距，提升閱讀舒適度 */
+}
+
+/* 限制最大寬度，避免在寬螢幕上排版跑掉 */
+#app {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* ==============================
+   🔝 頂部 Header 精緻化
+   ============================== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #333;
-  padding-bottom: 15px;
-  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-h1, h2, h3 {
-  color: #ffffff;
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  background: var(--accent-gradient); /* 文字漸層效果 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px; /* 微調字距 */
 }
 
-/* 📦 卡片通用樣式（主題卡片、單字卡片） */
-.topic-card, .word-card, .detail-card {
-  background-color: #1e1e1e; /* 稍淺的深灰卡片背景 */
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 15px;
-  transition: transform 0.2s, box-shadow 0.2s;
+/* ==============================
+   📦 精緻卡片通用樣式 (含磨砂玻璃效果)
+   ============================== */
+.card-common {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(10px); /* ✨ 磨砂玻璃核心效果 */
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px; /* 更圓潤的角 */
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
 }
 
-/* 滑鼠懸停時卡片微幅浮起與發光效果 */
+/* 懸浮時的微交互：浮起、發光 */
 .topic-card:hover, .word-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(0, 210, 211, 0.2);
-  border-color: #00d2d3;
+  transform: translateY(-5px); /* 向上浮起多一點 */
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(56, 189, 248, 0.5); /* 邊框微發光 */
   cursor: pointer;
 }
 
-/* 🔘 按鈕樣式 (亮藍色科技感) */
+/* 單字卡標題與翻譯 */
+.word-card h3 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.word-card p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 15px;
+}
+
+/* ==============================
+   🔘 精緻漸層按鈕
+   ============================== */
 button {
-  background-color: #00d2d3;
-  color: #121212;
+  background: var(--accent-gradient); /* 漸層背景 */
+  color: #ffffff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3); /* 按鈕陰影 */
 }
 
+/* 按鈕懸浮效果：微縮放與變亮 */
 button:hover {
-  background-color: #54a0ff;
+  background: var(--accent-hover);
+  transform: scale(1.05); /* 輕微放大 */
+  box-shadow: 0 6px 15px rgba(14, 165, 233, 0.4);
+}
+
+button:active {
+  transform: scale(0.98); /* 點擊時輕微凹陷感 */
 }
