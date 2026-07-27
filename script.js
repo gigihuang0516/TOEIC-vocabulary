@@ -180,12 +180,13 @@ function showWordList(topic) {
             const isFavorited = favorites[wordObj.word] ? true : false;
             const heartIcon = isFavorited ? '❤️' : '♡';
 
+           // 渲染單字卡片
             wordCard.innerHTML = `
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <h3 style="margin: 0;">${wordObj.word}</h3>
-                    <span class="list-fav-btn" style="cursor: pointer; font-size: 1.2rem;">${heartIcon}</span>
+                   <h3 style="margin: 0; font-size: 1.4rem; color: #1a1a1a;">${wordObj.word}</h3>
+                   <span class="list-fav-btn" style="cursor: pointer; font-size: 1.4rem;">${heartIcon}</span>
                 </div>
-                <p style="margin-top: 8px;">${wordObj.definition}</p>
+                <p style="margin: 6px 0 0 0; color: #555555; font-size: 0.95rem;">${wordObj.definition}</p>
             `;
 
             const favBtn = wordCard.querySelector('.list-fav-btn');
