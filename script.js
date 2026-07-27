@@ -210,11 +210,7 @@ function toggleFavorite(word) {
                 if (detailFavBtn) detailFavBtn.innerText = '♡';
             });
         } else {
-            // 點擊可以開啟詳細頁面
-        card.addEventListener('click', () => {
-            previousView = 'favorites-view'; // 📌 2. 紀錄來源為我的收藏
-            showWordDetail(wordObj);
-            });
+            
             favRef.set(true).then(() => {
                 // 點擊可以開啟詳細頁面
                 if (detailFavBtn) detailFavBtn.innerText = '❤️';
@@ -301,9 +297,11 @@ function loadFavoriteWords() {
                         <p>${wordObj.definition}</p>
                     `;
                     // 點擊可以開啟詳細頁面
-                    card.addEventListener('click', () => {
-                        showWordDetail(wordObj);
-                    });
+                    // 📄 點擊「收藏卡片」時，開啟單字詳細資料
+                 card.addEventListener('click', () => {
+                     previousView = 'favorites-view'; // 📌 紀錄來源為我的收藏
+                     showWordDetail(wordObj);
+                });
                     favListContainer.appendChild(card);
                 });
             });
