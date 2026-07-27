@@ -61,13 +61,6 @@
   <div id="word-list"></div>
 </section>
 
-    <!-- 3. 我的收藏區塊 -->
-    <section id="favorites-view" style="display: none;">
-      <button id="back-from-fav-btn">⬅️ 返回</button>
-      <h2>💖 我的收藏單字</h2>
-      <div id="favorites-list" class="word-list"></div>
-    </section>
-
     <!-- 5. 單字詳細頁面 -->
 <section id="word-detail-view" style="display: none;">
   <div class="detail-header">
@@ -133,6 +126,23 @@
     const database = firebase.database();
     const googleProvider = new firebase.auth.GoogleAuthProvider();
   </script>
+
+    <!-- 6. 我的收藏單字頁面 -->
+<section id="favorites-view" style="display: none;">
+  <div class="fav-header">
+    <div class="fav-header-left">
+      <!-- 1. 返回按鈕 -->
+      <button id="back-from-fav-btn">← 返回</button>
+      <!-- 2. 大標題 -->
+      <h2>我的收藏單字</h2>
+    </div>
+    <!-- 3. 右上角書本插圖 (檔名為 images/book.png) -->
+    <img src="images/book.png" alt="Book Illustration" class="fav-book-img">
+  </div>
+
+  <!-- 4. 收藏單字卡片列表 -->
+  <div id="favorites-list"></div>
+</section>
 
   <!-- 3. 主程式碼 -->
   <script src="script.js"></script>
