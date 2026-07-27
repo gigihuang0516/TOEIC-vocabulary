@@ -51,55 +51,49 @@ body, html {
 }
 
 /* ==============================
-   🔝 主標題文字與白色花紋
+   🔝 主標題文字與純 CSS 線條
    ============================== */
 .title-container {
   position: relative;
-  padding: 20px 0;    /* 給花紋留點空間 */
-  margin-bottom: 50px; /* 與按鈕的距離 */
+  padding: 15px 0;
+  margin-bottom: 40px;
 }
 
 .title-container h1 {
-  color: #ffffff;      /* 白色文字 */
-  font-size: 5rem;     /* 照設計圖放大字體 */
+  color: #ffffff;
+  font-size: 3.5rem; /* 字體大小微調 */
   font-family: Arial, sans-serif;
   font-weight: 700;
   margin: 0;
-  white-space: nowrap; /* 讓文字不換行 */
-  letter-spacing: -2px;/* 字距微調 */
+  white-space: nowrap;
+  letter-spacing: 1px;
 }
 
-/* 🏆 使用 CSS 生成主標題上下方的古典花紋線條 */
-.title-container::before, 
+/* 🏆 上方白線 */
+.title-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白線 */
+}
+
+/* 🏆 下方白線 */
 .title-container::after {
   content: "";
   position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;       /* 花紋與文字同寬 */
-  max-width: 700px;  /* 限制花紋最大寬度 */
-  height: 2px;       /* 線條厚度 */
-  background-color: rgba(255, 255, 255, 0.7); /* 半透明白線 */
+  width: 100%;
+  max-width: 600px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白線 */
 }
-
-/* 上方線條與花紋圖案 */
-.title-container::before {
-  top: -10px;
-  /* 建議檔名改為英文，如 ornament.png */
-  background-image: url('images/ornament.png'); 
-  background-size: contain;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  height: 60px; /* 給花紋足夠高度 */
-}
-
-/* 下方線條 */
-.title-container::after {
-  bottom: -10px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
 /* ==============================
    🔘 精確還原的按鈕樣式
    ============================== */
