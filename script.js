@@ -62,7 +62,11 @@ fetch('words.json')
 function showWordList(topic) {
     const topicView = document.getElementById('topic-view');
     const wordListView = document.getElementById('word-list-view');
-
+// 📄 點擊「單字卡片其他區域」時，開啟單字詳細資料
+wordCard.addEventListener('click', () => {
+    previousView = 'word-list-view'; // 📌 1. 紀錄來源為單字列表
+    showWordDetail(wordObj);
+});
     topicView.style.display = 'none';
     wordListView.style.display = 'block';
 
@@ -106,7 +110,10 @@ function showWordList(topic) {
             wordCard.addEventListener('click', () => {
                 showWordDetail(wordObj);
             });
-
+            // 🙈 隱藏列表頁面，僅顯示詳細頁面
+            document.getElementById('word-list-view').style.display = 'none';
+            document.getElementById('favorites-view').style.display = 'none'; // 📌 3. 確保收藏頁面也被隱藏
+            document.getElementById('word-detail-view').style.display = 'block';
             wordList.appendChild(wordCard);
         });
     };
@@ -203,7 +210,13 @@ function toggleFavorite(word) {
                 if (detailFavBtn) detailFavBtn.innerText = '♡';
             });
         } else {
+            // 點擊可以開啟詳細頁面
+        card.addEventListener('click', () => {
+            previousView = 'favorites-view'; // 📌 2. 紀錄來源為我的收藏
+            showWordDetail(wordObj);
+            });
             favRef.set(true).then(() => {
+                // 點擊可以開啟詳細頁面
                 if (detailFavBtn) detailFavBtn.innerText = '❤️';
             });
         }
