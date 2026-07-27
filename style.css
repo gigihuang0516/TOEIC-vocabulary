@@ -1,1 +1,56 @@
+/* 🌙 全站基礎樣式與深色背景 */
+body {
+  background-color: #121212; /* 深灰近黑色背景 */
+  color: #e0e0e0;            /* 柔和白字，保護眼睛 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
+/* 頂部 Header 樣式 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+/* 📦 卡片通用樣式（主題卡片、單字卡片） */
+.topic-card, .word-card, .detail-card {
+  background-color: #1e1e1e; /* 稍淺的深灰卡片背景 */
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* 滑鼠懸停時卡片微幅浮起與發光效果 */
+.topic-card:hover, .word-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 210, 211, 0.2);
+  border-color: #00d2d3;
+  cursor: pointer;
+}
+
+/* 🔘 按鈕樣式 (亮藍色科技感) */
+button {
+  background-color: #00d2d3;
+  color: #121212;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #54a0ff;
+}
