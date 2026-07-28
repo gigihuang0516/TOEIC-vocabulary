@@ -1626,6 +1626,1500 @@
     "example_zh": "主管嚴厲地提醒員工遵守安全協定。",
     "collocations": ["warn sternly（嚴厲警告）"]
   }
- ]
- }
+ ]    
+},
+[
+  {
+    "topic_id": "topic_02",
+    "topic_title": "公司規章與法律",
+    "description": "包含辦公室守則、服裝儀容規定、合約條款與法律遵行相關詞彙",
+    "words": [
+      [
+  {
+    "id": "w_169",
+    "word": "approval",
+    "pos": "n.",
+    "phonetic": "[ə`pruvḷ]",
+    "definition": "批准，認可",
+    "example_en": "The final budget proposal is pending written approval from the board.",
+    "example_zh": "最終預算提案正在等待董事會的書面批准。",
+    "collocations": ["obtain approval（獲得批准）", "written approval（書面許可）", "seek approval（尋求批准）"]
+  },
+  {
+    "id": "w_170",
+    "word": "form",
+    "pos": "n.",
+    "phonetic": "[fɔrm]",
+    "definition": "種類，類型；形式",
+    "example_en": "All visitors must present a valid form of identification at the security gate.",
+    "example_zh": "所有訪客必須在安檢口出示有效的身分證明文件。",
+    "collocations": ["a form of identification（一種身分證明）", "in written form（以書面形式）"]
+  },
+  {
+    "id": "w_171",
+    "word": "immediately",
+    "pos": "adv.",
+    "phonetic": "[ɪ`midɪətli]",
+    "definition": "立即，馬上",
+    "example_en": "The new safety protocol will take effect immediately after the announcement.",
+    "example_zh": "新的安全協定將在宣布後立即生效。",
+    "collocations": ["immediately after（在……之後立即）", "effective immediately（立即生效）", "immediately upon arrival（到達後立即）"]
+  },
+  {
+    "id": "w_172",
+    "word": "inspection",
+    "pos": "n.",
+    "phonetic": "[ɪn`spɛkʃən]",
+    "definition": "檢查，視察",
+    "example_en": "Routine safety inspections are conducted every month to prevent accidents.",
+    "example_zh": "每月都會進行例行安全檢查以防止事故發生。",
+    "collocations": ["conduct an inspection（進行檢查）", "safety inspection（安全檢查）", "on-site inspection（實地檢查）"]
+  },
+  {
+    "id": "w_173",
+    "word": "arrangement",
+    "pos": "n.",
+    "phonetic": "[ə`rendʒmənt]",
+    "definition": "安排，準備；佈置",
+    "example_en": "The travel coordinator has made all the arrangements for the international conference.",
+    "example_zh": "旅遊協調員已為國際會議做好了所有安排。",
+    "collocations": ["make arrangements for（為……做安排）", "travel arrangements（行程安排）", "seating arrangement（座位安排）"]
+  },
+  {
+    "id": "w_174",
+    "word": "procedure",
+    "pos": "n.",
+    "phonetic": "[prə`sidʒɚ]",
+    "definition": "手續，程序",
+    "example_en": "Please follow the standard emergency procedures in the event of a fire.",
+    "example_zh": "發生火災時，請遵循標準緊急應變程序。",
+    "collocations": ["standard operating procedure（標準作業程序）", "follow a procedure（遵循程序）", "application procedure（申請程序）"]
+  },
+  {
+    "id": "w_175",
+    "word": "negative",
+    "pos": "adj.",
+    "phonetic": "[`nɛgətɪv]",
+    "definition": "負面的，消極的",
+    "example_en": "The company received negative feedback regarding its recent price increase.",
+    "example_zh": "該公司收到了關於最近調漲價格的負面回饋。",
+    "collocations": ["negative feedback（負面回饋）", "negative impact（負面影響）", "negative attitude（消極態度）"]
+  },
+  {
+    "id": "w_176",
+    "word": "mandate",
+    "pos": "v. / n.",
+    "phonetic": "[`mændet]",
+    "definition": "使～成為必須（做）的 / 授權，命令",
+    "example_en": "The corporate policy mandates that all employees wear ID badges on site.",
+    "example_zh": "公司政策規定所有員工在現場必須配戴識別證。",
+    "collocations": ["mandate that（強制規定……）", "obtain a mandate（獲得授權）"]
+  },
+  {
+    "id": "w_177",
+    "word": "effect",
+    "pos": "n. / v.",
+    "phonetic": "[ɪ`fɛkt]",
+    "definition": "（法律等的）效力；效果；影響 / 造成（結果）",
+    "example_en": "The revised tax regulation will come into effect starting next quarter.",
+    "example_zh": "修改後的稅務法規將於下一季度開始生效。",
+    "collocations": ["take effect（生效）", "come into effect（開始生效）", "have an effect on（對……產生影響）"]
+  },
+  {
+    "id": "w_178",
+    "word": "drastically",
+    "pos": "adv.",
+    "phonetic": "[`dræstɪkli]",
+    "definition": "激烈地；大幅地；徹底地",
+    "example_en": "The company drastically reduced operational expenses to survive the downturn.",
+    "example_zh": "該公司大幅削減營運費用以度過低迷期。",
+    "collocations": ["drastically reduce（大幅減少）", "drastically change（劇烈改變）"]
+  },
+  {
+    "id": "w_179",
+    "word": "according to",
+    "pos": "phr.",
+    "definition": "根據～，依照～",
+    "example_en": "According to the financial report, revenue increased by ten percent this year.",
+    "example_zh": "根據財務報告，今年的收入成長了百分之十。",
+    "collocations": ["according to guidelines（根據指導方針）", "according to regulations（根據法規）"]
+  },
+  {
+    "id": "w_180",
+    "word": "enable",
+    "pos": "v.",
+    "phonetic": "[ɛn`ebḷ]",
+    "definition": "使（某人）能夠（做某事）",
+    "example_en": "The new automation tool will enable staff to process orders much faster.",
+    "example_zh": "新的自動化工具將使員工能夠更快地處理訂單。",
+    "collocations": ["enable someone to do（使某人能夠做……）"]
+  },
+  {
+    "id": "w_181",
+    "word": "standard",
+    "pos": "n.",
+    "phonetic": "[`stændɚd]",
+    "definition": "標準；規範",
+    "example_en": "All products must meet strict quality standards before being shipped.",
+    "example_zh": "所有產品在發貨前必須符合嚴格的品質標準。",
+    "collocations": ["safety standards（安全標準）", "meet standards（符合標準）", "high standard（高標準）"]
+  },
+  {
+    "id": "w_182",
+    "word": "constant",
+    "pos": "adj.",
+    "phonetic": "[`kɑnstənt]",
+    "definition": "持續的，不斷的",
+    "example_en": "The customer service team handles a constant stream of phone inquiries daily.",
+    "example_zh": "客戶服務團隊每天都要處理源源不絕的電話詢問。",
+    "collocations": ["constant communication（持續的溝通）", "constant growth（持續的增長）"]
+  },
+  {
+    "id": "w_183",
+    "word": "act",
+    "pos": "n. / v.",
+    "phonetic": "[ækt]",
+    "definition": "法案，法令；行為 / 擔當；行動",
+    "example_en": "Congress passed a new act to protect consumer privacy online.",
+    "example_zh": "國會通過了一項新法案來保護網路消費者的隱私。",
+    "collocations": ["pass an act（通過法案）", "act on behalf of（代表……行動）"]
+  },
+  {
+    "id": "w_184",
+    "word": "compensation",
+    "pos": "n.",
+    "phonetic": "[`kɑmpən`seʃən]",
+    "definition": "補償（金）；報酬",
+    "example_en": "The company offered fair compensation to workers affected by the layoff.",
+    "example_zh": "該公司向受裁員影響的工人提供了合理的補償。",
+    "collocations": ["compensation package（薪酬套裝方案）", "compensation for（對……的補償）"]
+  },
+  {
+    "id": "w_185",
+    "word": "ban",
+    "pos": "n. / v.",
+    "phonetic": "[bæn]",
+    "definition": "禁止；禁令",
+    "example_en": "The government imposed a ban on single-use plastic bags in retail stores.",
+    "example_zh": "政府禁止零售商店使用一次性塑膠袋。",
+    "collocations": ["place a ban on（禁止……）", "lift a ban（解除禁令）"]
+  },
+  {
+    "id": "w_186",
+    "word": "obligation",
+    "pos": "n.",
+    "phonetic": "[`ɑblə`geʃən]",
+    "definition": "義務，責任",
+    "example_en": "Employers have a legal obligation to provide a safe working environment.",
+    "example_zh": "雇主有法律義務提供安全的工作環境。",
+    "collocations": ["legal obligation（法律義務）", "fulfill an obligation（履行義務）", "under obligation（有義務）"]
+  },
+  {
+    "id": "w_187",
+    "word": "authorize",
+    "pos": "v.",
+    "phonetic": "[`ɔθə`raɪz]",
+    "definition": "批准～，授權（某人）做某事",
+    "example_en": "Only the chief executive officer can authorize expenditures exceeding $10,000.",
+    "example_zh": "只有執行長才能授權超過一萬美元的支出。",
+    "collocations": ["authorized dealer（授權經銷商）", "authorized personnel（授權人員）"]
+  },
+  {
+    "id": "w_188",
+    "word": "prohibit",
+    "pos": "v.",
+    "phonetic": "[prə`hɪbɪt]",
+    "definition": "禁止",
+    "example_en": "Company regulations strictly prohibit taking internal documents out of the office.",
+    "example_zh": "公司規定嚴格禁止將內部文件帶出辦公室。",
+    "collocations": ["prohibit someone from doing（禁止某人做……）", "strictly prohibit（嚴格禁止）"]
+  },
+  {
+    "id": "w_189",
+    "word": "abolish",
+    "pos": "v.",
+    "phonetic": "[ə`bɑlɪʃ]",
+    "definition": "廢除（制度、法律等）",
+    "example_en": "The board voted to abolish the outdated paper filing system completely.",
+    "example_zh": "董事會投票決定完全廢除過時的紙本歸檔系統。",
+    "collocations": ["abolish a law（廢除法律）", "abolish a system（廢除制度）"]
+  },
+  {
+    "id": "w_190",
+    "word": "enforce",
+    "pos": "v.",
+    "phonetic": "[ɪn`fors]",
+    "definition": "執行，實施（法律等）",
+    "example_en": "Security officers are responsible for enforcing traffic rules within the facility.",
+    "example_zh": "安衛人員負責在廠區內執行交通規則。",
+    "collocations": ["enforce regulations（執行法規）", "enforce compliance（強制遵守）"]
+  },
+  {
+    "id": "w_191",
+    "word": "habit",
+    "pos": "n.",
+    "phonetic": "[`hæbɪt]",
+    "definition": "習慣",
+    "example_en": "Developing good time management habits can improve daily productivity.",
+    "example_zh": "養成良好的時間管理習慣可以提高日常生產力。",
+    "collocations": ["work habit（工作習慣）", "regular habit（常規習慣）"]
+  },
+  {
+    "id": "w_192",
+    "word": "legislation",
+    "pos": "n.",
+    "phonetic": "[`lɛdʒɪs`leʃən]",
+    "definition": "立法；法律，法規",
+    "example_en": "The government is introducing new legislation to regulate digital currencies.",
+    "example_zh": "政府正在推行新立法以規範數位貨幣。",
+    "collocations": ["pass legislation（通過立法）", "pending legislation（審議中的法案）"]
+  },
+  {
+    "id": "w_193",
+    "word": "restrict",
+    "pos": "v.",
+    "phonetic": "[rɪ`strɪkt]",
+    "definition": "限制，限定",
+    "example_en": "Access to confidential server logs is restricted to IT administrators.",
+    "example_zh": "存取機密伺服器紀錄僅限於 IT 管理員。",
+    "collocations": ["restrict access to（限制對……的存取權）", "restrict A to B（將 A 限制在 B 範圍內）"]
+  },
+  [
+  {
+    "id": "w_194",
+    "word": "bend over",
+    "pos": "phr.",
+    "definition": "彎腰",
+    "example_en": "The worker had to bend over to pick up the safety equipment from the floor.",
+    "example_zh": "工人不得不彎腰從地上撿起安全設備。",
+    "collocations": ["bend over to do（彎腰去做……）"]
+  },
+  {
+    "id": "w_195",
+    "word": "by oneself",
+    "pos": "phr.",
+    "definition": "獨自，獨立",
+    "example_en": "The new manager completed the legal compliance report entirely by himself.",
+    "example_zh": "新經理完全獨立完成了法律合規報告。",
+    "collocations": ["do something by oneself（獨立完成某事）"]
+  },
+  {
+    "id": "w_196",
+    "word": "date",
+    "pos": "n.",
+    "phonetic": "[det]",
+    "definition": "日期",
+    "example_en": "Please check the expiration date on the contract before signing.",
+    "example_zh": "簽署前請確認合約上的到期日期。",
+    "collocations": ["expiration date（到期日）", "effective date（生效日期）"]
+  },
+  {
+    "id": "w_197",
+    "word": "get used to",
+    "pos": "phr.",
+    "definition": "習慣～",
+    "example_en": "It took the team a few weeks to get used to the new safety regulations.",
+    "example_zh": "團隊花了幾週時間才習慣新的安全規定。",
+    "collocations": ["get used to the new system（習慣新系統）"]
+  },
+  {
+    "id": "w_198",
+    "word": "if it's okay with you",
+    "pos": "phr.",
+    "definition": "如果你可以接受的話",
+    "example_en": "If it's okay with you, we can reschedule the legal briefing for tomorrow.",
+    "example_zh": "如果您可以接受的話，我們可以將法律簡報改期到明天。",
+    "collocations": ["if it's okay with you（如果您不介意的話）"]
+  },
+  {
+    "id": "w_199",
+    "word": "in case of",
+    "pos": "phr.",
+    "definition": "萬一～",
+    "example_en": "In case of emergency, press the alarm button immediately.",
+    "example_zh": "萬一遇到緊急情況，請立即按下警報按鈕。",
+    "collocations": ["in case of emergency（萬一發生緊急狀況）"]
+  },
+  {
+    "id": "w_200",
+    "word": "in rows",
+    "pos": "phr.",
+    "definition": "一排排地",
+    "example_en": "The chairs in the auditorium were arranged neatly in rows for the hearing.",
+    "example_zh": "禮堂裡的椅子一排排整齊排列著以準備進行公聽會。",
+    "collocations": ["arranged in rows（成排排列）"]
+  },
+  {
+    "id": "w_201",
+    "word": "item",
+    "pos": "n.",
+    "phonetic": "[`aɪtəm]",
+    "definition": "項目",
+    "example_en": "The first item on the agenda is the review of corporate policies.",
+    "example_zh": "議程上的第一個項目是審查公司政策。",
+    "collocations": ["agenda item（議程項目）", "line item（單項預算/細項）"]
+  },
+  {
+    "id": "w_202",
+    "word": "legal",
+    "pos": "adj.",
+    "phonetic": "[`ligḷ]",
+    "definition": "法律的；合法的",
+    "example_en": "The company consulted its legal team before proceeding with the acquisition.",
+    "example_zh": "該公司在進行併購前諮詢了其法律團隊。",
+    "collocations": ["legal department（法務部）", "legal action（法律行動）", "legal advice（法律諮詢）"]
+  },
+  {
+    "id": "w_203",
+    "word": "let go",
+    "pos": "phr.",
+    "definition": "釋放，放開",
+    "example_en": "Due to budget cuts, the firm had to let go of several junior employees.",
+    "example_zh": "由於預算削減，該公司不得不解僱幾名初級員工。",
+    "collocations": ["let go of employees（解僱員工）"]
+  },
+  {
+    "id": "w_204",
+    "word": "ruler",
+    "pos": "n.",
+    "phonetic": "[`rulɚ]",
+    "definition": "尺",
+    "example_en": "The architect used a precise stainless steel ruler to check the blueprint.",
+    "example_zh": "建築師使用精密的白鋼尺來核對藍圖。",
+    "collocations": ["measuring ruler（測量尺）"]
+  },
+  {
+    "id": "w_205",
+    "word": "stop",
+    "pos": "v.",
+    "phonetic": "[stɑp]",
+    "definition": "停止",
+    "example_en": "The factory manager ordered the workers to stop operations during the inspection.",
+    "example_zh": "廠長在檢查期間下令工人停止作業。",
+    "collocations": ["stop production（停止生產）", "stop operations（停止營運）"]
+  },
+  {
+    "id": "w_206",
+    "word": "busy",
+    "pos": "adj.",
+    "phonetic": "[`bɪzi]",
+    "definition": "忙碌的",
+    "example_en": "The legal department has been extremely busy preparing for the upcoming court trial.",
+    "example_zh": "法務部一直非常忙於為即將到來的庭審做準備。",
+    "collocations": ["busy schedule（忙碌的時程）", "busy season（旺季）"]
+  },
+  {
+    "id": "w_207",
+    "word": "curriculum",
+    "pos": "n.",
+    "phonetic": "[kə`rɪkjələm]",
+    "definition": "課程",
+    "example_en": "The training curriculum includes mandatory modules on corporate ethics.",
+    "example_zh": "培訓課程包含公司道德的必修模組。",
+    "collocations": ["training curriculum（培訓課程）", "core curriculum（核心課程）"]
+  },
+  {
+    "id": "w_208",
+    "word": "dress",
+    "pos": "n. / v.",
+    "phonetic": "[drɛs]",
+    "definition": "服裝 / 穿衣",
+    "example_en": "All employees are expected to adhere to the company dress code.",
+    "example_zh": "所有員工都被要求遵守公司的服裝儀容規定。",
+    "collocations": ["dress code（著裝規範）", "dress professionally（穿著專業）"]
+  },
+  {
+    "id": "w_209",
+    "word": "enough",
+    "pos": "adj. / n.",
+    "phonetic": "[ɪ`nʌf]",
+    "definition": "足夠的 / 足夠充分的數量",
+    "example_en": "We have enough evidence to prove that the company complied with the law.",
+    "example_zh": "我們有足夠的證據證明該公司遵守了法律。",
+    "collocations": ["enough time（足夠的時間）", "fairly enough（相當足夠）"]
+  },
+  {
+    "id": "w_210",
+    "word": "finish",
+    "pos": "v.",
+    "phonetic": "[`fɪnɪʃ]",
+    "definition": "結束，完成",
+    "example_en": "Please finish reviewing the contract before submitting it to the client.",
+    "example_zh": "請在提交給客戶前完成合約審查。",
+    "collocations": ["finish a project（完成專案）", "finish task（完成任務）"]
+  },
+  {
+    "id": "w_211",
+    "word": "have a problem (in) -ing",
+    "pos": "phr.",
+    "definition": "做～時有問題",
+    "example_en": "Many users had a problem in accessing the updated privacy terms.",
+    "example_zh": "許多使用者在存取更新後的隱私條款時遇到問題。",
+    "collocations": ["have a problem in understanding（理解上有困難）"]
+  },
+  {
+    "id": "w_212",
+    "word": "large",
+    "pos": "adj.",
+    "phonetic": "[lɑrdʒ]",
+    "definition": "大的，寬大的",
+    "example_en": "A large portion of the budget was allocated to legal defense.",
+    "example_zh": "預算的大部分被分配給法律辯護。",
+    "collocations": ["large scale（大規模）", "large quantity（大批量）"]
+  },
+  {
+    "id": "w_213",
+    "word": "law firm",
+    "pos": "phr.",
+    "definition": "法律事務所",
+    "example_en": "She hired a prestigious law firm to handle the patent infringement case.",
+    "example_zh": "她聘請了一家知名的法律事務所來處理專利侵權案。",
+    "collocations": ["international law firm（國際律師事務所）"]
+  },
+  {
+    "id": "w_214",
+    "word": "loudly",
+    "pos": "adv.",
+    "phonetic": "[`laʊdli]",
+    "definition": "大聲地",
+    "example_en": "Please do not speak loudly in the library or quiet study zones.",
+    "example_zh": "請勿在圖書館或安靜的自習區大聲喧嘩。",
+    "collocations": ["speak loudly（大聲講話）"]
+  },
+  {
+    "id": "w_215",
+    "word": "plus",
+    "pos": "prep.",
+    "phonetic": "[plʌs]",
+    "definition": "加上～，還有～",
+    "example_en": "The basic salary is $5,000 plus a performance-based annual bonus.",
+    "example_zh": "基本薪資為五千美元，外加基於績效的年度獎金。",
+    "collocations": ["plus taxes（加稅）", "plus shipping cost（加上運費）"]
+  },
+  {
+    "id": "w_216",
+    "word": "protect",
+    "pos": "v.",
+    "phonetic": "[prə`tɛkt]",
+    "definition": "保護",
+    "example_en": "The new copyright law is designed to protect intellectual property rights.",
+    "example_zh": "新版權法旨在保護智慧財產權。",
+    "collocations": ["protect privacy（保護隱私）", "protect assets（保護資產）"]
+  },
+  {
+    "id": "w_217",
+    "word": "seldom",
+    "pos": "adv.",
+    "phonetic": "[`sɛldəm]",
+    "definition": "很少（做～）",
+    "example_en": "The company seldom changes its core internal operating guidelines.",
+    "example_zh": "該公司很少更改其核心內部作業準則。",
+    "collocations": ["seldom seen（罕見的）"]
+  },
+  {
+    "id": "w_218",
+    "word": "theft",
+    "pos": "n.",
+    "phonetic": "[θɛft]",
+    "definition": "竊盜",
+    "example_en": "The security camera footage helped the police solve the identity theft case.",
+    "example_zh": "監視器畫面幫助警方破獲了該起身分竊盜案。",
+    "collocations": ["identity theft（身分盜用）", "property theft（財產竊盜）"]
+  },
+  {
+    "id": "w_219",
+    "word": "try",
+    "pos": "v.",
+    "phonetic": "[traɪ]",
+    "definition": "試圖；努力",
+    "example_en": "We will try our best to resolve the legal dispute out of court.",
+    "example_zh": "我們將盡最大努力在法庭外解決法律糾紛。",
+    "collocations": ["try best（盡全力）"]
+  },
+  {
+    "id": "w_220",
+    "word": "witness",
+    "pos": "n. / v.",
+    "phonetic": "[`wɪtnɪs]",
+    "definition": "目擊者；目擊證人 / 目擊",
+    "example_en": "The key witness was asked to testify during the court session.",
+    "example_zh": "關鍵證人被要求在庭審期間出庭作證。",
+    "collocations": ["eye witness（目擊證人）", "witness an agreement（見證合約）"]
+  },
+  {
+    "id": "w_221",
+    "word": "write",
+    "pos": "v.",
+    "phonetic": "[raɪt]",
+    "definition": "寫",
+    "example_en": "Our attorney will write a formal letter of complaint to the supplier.",
+    "example_zh": "我們的律師將向供應商寫一封正式的投訴信。",
+    "collocations": ["write a contract（擬定合約）", "write a report（撰寫報告）"]
+  },
+  {
+    "id": "w_222",
+    "word": "against the law",
+    "pos": "phr.",
+    "definition": "違法的",
+    "example_en": "It is strictly against the law to operate heavy machinery without proper certification.",
+    "example_zh": "無適當認證操作重型機械是完全違法的。",
+    "collocations": ["be against the law（違法）"]
+  },
+  {
+    "id": "w_223",
+    "word": "by all means",
+    "pos": "phr.",
+    "definition": "務必；當然可以",
+    "example_en": "By all means, contact our legal counsel if you have further questions.",
+    "example_zh": "如果您有其他疑問，務必聯絡我們的法律顧問。",
+    "collocations": ["by all means（當然/務必）"]
+  },
+  {
+    "id": "w_224",
+    "word": "by mistake",
+    "pos": "phr.",
+    "definition": "搞錯地，不小心",
+    "example_en": "Confidential financial information was sent to an external client by mistake.",
+    "example_zh": "機密財務資訊不小心被發送給了外部客戶。",
+    "collocations": ["deleted by mistake（誤刪）", "sent by mistake（誤寄）"]
+  },
+  {
+    "id": "w_225",
+    "word": "come to an end",
+    "pos": "phr.",
+    "definition": "結束",
+    "example_en": "The exclusive distribution agreement will come to an end next month.",
+    "example_zh": "獨家分銷協議將於下個月結束。",
+    "collocations": ["bring to an end（使結束）", "come to a close（進入尾聲）"]
+  },
+  {
+    "id": "w_226",
+    "word": "company regulations",
+    "pos": "phr.",
+    "definition": "公司規定",
+    "example_en": "Employees must strictly follow all company regulations regarding privacy.",
+    "example_zh": "員工必須嚴格遵守公司有關隱私的所有規定。",
+    "collocations": ["comply with company regulations（遵守公司規定）"]
+  },
+  {
+    "id": "w_227",
+    "word": "give directions",
+    "pos": "phr.",
+    "definition": "給予指示；指引方向",
+    "example_en": "The supervisor gave clear directions on how to handle safety violations.",
+    "example_zh": "主管就如何處理安全違規給出了明確的指示。",
+    "collocations": ["give clear directions（給予明確指示）"]
+  },
+  {
+    "id": "w_228",
+    "word": "hold up",
+    "pos": "phr.",
+    "definition": "支撐，支持；阻礙",
+    "example_en": "Unexpected regulatory delays held up the building project for weeks.",
+    "example_zh": "意料之外的法規延誤使該建築專案停滯了數週。",
+    "collocations": ["hold up progress（耽誤進度）"]
+  },
+  {
+    "id": "w_229",
+    "word": "if I'm not mistaken",
+    "pos": "phr.",
+    "definition": "如果我的了解沒錯的話",
+    "example_en": "If I'm not mistaken, the contract renewal deadline is next Friday.",
+    "example_zh": "如果我沒記錯的話，續約的截止日期是下週五。",
+    "collocations": ["if I'm not mistaken（若我沒記錯）"]
+  },
+  {
+    "id": "w_230",
+    "word": "in progress",
+    "pos": "phr.",
+    "definition": "進行中的",
+    "example_en": "An internal audit of financial operations is currently in progress.",
+    "example_zh": "財務營運的內部審計目前正在進行中。",
+    "collocations": ["work in progress（進行中的工作）"]
+  },
+  {
+    "id": "w_231",
+    "word": "keep in mind",
+    "pos": "phr.",
+    "definition": "記得，記在心上",
+    "example_en": "Please keep in mind that all expense reports must include receipts.",
+    "example_zh": "請記住，所有費用報銷報告都必須附上收據。",
+    "collocations": ["keep in mind that（牢記……）"]
+  },
+  {
+    "id": "w_232",
+    "word": "legal counsel",
+    "pos": "phr.",
+    "definition": "法律諮詢；法律顧問",
+    "example_en": "The board requested advice from expert legal counsel regarding the merger.",
+    "example_zh": "董事會就合併事宜向專家法律顧問尋求建議。",
+    "collocations": ["seek legal counsel（尋求法律諮詢）", "appoint legal counsel（任命法律顧問）"]
+  },
+  {
+    "id": "w_233",
+    "word": "self-defense",
+    "pos": "n.",
+    "phonetic": "[`sɛlf dɪ`fɛns]",
+    "definition": "自我防禦；正當防衛",
+    "example_en": "The defendant claimed that he acted purely in self-defense during the incident.",
+    "example_zh": "被告聲稱他在事件發生期間完全是出於正當防衛。",
+    "collocations": ["in self-defense（出於正當防衛）"]
+  },
+  {
+    "id": "w_234",
+    "word": "suspect",
+    "pos": "n. / v.",
+    "phonetic": "[`sʌspɛkt]",
+    "definition": "嫌疑犯 / 懷疑",
+    "example_en": "Police are questioning a suspect in connection with the corporate fraud.",
+    "example_zh": "警方正在審問一名涉嫌公司詐欺案的嫌犯。",
+    "collocations": ["prime suspect（主要嫌疑犯）", "suspect that（懷疑……）"]
+  },
+  {
+    "id": "w_235",
+    "word": "take one's advice",
+    "pos": "phr.",
+    "definition": "接受某人的勸告",
+    "example_en": "I strongly suggest you take the attorney's advice and sign the agreement.",
+    "example_zh": "我強烈建議你接受律師的勸告並簽署協議。",
+    "collocations": ["take legal advice（聽取法律建議）"]
+  },
+  {
+    "id": "w_236",
+    "word": "to one's advantage",
+    "pos": "phr.",
+    "definition": "對某人有利地",
+    "example_en": "The sudden shift in market policy worked to our firm's advantage.",
+    "example_zh": "市場政策的突然轉變對我們公司有利。",
+    "collocations": ["turn to one's advantage（轉變成對某人有利）"]
+  },
+  {
+    "id": "w_237",
+    "word": "under control",
+    "pos": "phr.",
+    "definition": "在控制中",
+    "example_en": "The security team assured management that the risk is completely under control.",
+    "example_zh": "安全團隊向管理層保證風險完全在控制之中。",
+    "collocations": ["bring under control（使其處於控制之下）"]
+  },
+  {
+    "id": "w_238",
+    "word": "under the supervision of",
+    "pos": "phr.",
+    "definition": "在（某人）的監督下",
+    "example_en": "Trainees must operate machinery under the supervision of certified engineers.",
+    "example_zh": "受訓人員必須在合格工程師的監督下操作機械。",
+    "collocations": ["under direct supervision of（在……的直接監督下）"]
+  },
+  {
+    "id": "w_239",
+    "word": "abuse",
+    "pos": "n. / v.",
+    "phonetic": "[ə`bjus]",
+    "definition": "濫用",
+    "example_en": "The audit revealed an abuse of company funds by a senior executive.",
+    "example_zh": "審計揭露了一位高階主管濫用公司資金的情況。",
+    "collocations": ["abuse of power（權力濫用）", "substance abuse（物質濫用）"]
+  },
+  {
+    "id": "w_240",
+    "word": "alert",
+    "pos": "v. / adj.",
+    "phonetic": "[ə`lɝt]",
+    "definition": "提醒（某人）注意 / 警覺的",
+    "example_en": "Security guards remained alert throughout the international summit.",
+    "example_zh": "安全人員在整個國際高峰會期間保持警惕。",
+    "collocations": ["stay alert（保持警惕）", "alert someone to（提醒某人……）"]
+  },
+  {
+    "id": "w_241",
+    "word": "assessment",
+    "pos": "n.",
+    "phonetic": "[ə`sɛsmənt]",
+    "definition": "評價，評估",
+    "example_en": "The committee conducted a comprehensive risk assessment before investing.",
+    "example_zh": "委員會在投資前進行了全面的風險評估。",
+    "collocations": ["risk assessment（風險評估）", "performance assessment（績效評估）"]
+  },
+  {
+    "id": "w_242",
+    "word": "at all times",
+    "pos": "phr.",
+    "definition": "隨時，永遠",
+    "example_en": "Safety goggles must be worn inside the chemical factory at all times.",
+    "example_zh": "化學工廠內必須隨時配戴安全護目鏡。",
+    "collocations": ["available at all times（隨時可用）"]
+  },
+  {
+    "id": "w_243",
+    "word": "authorization",
+    "pos": "n.",
+    "phonetic": "[`ɔθərə`zeʃən]",
+    "definition": "授權，委任",
+    "example_en": "You cannot access customer data files without official authorization.",
+    "example_zh": "未經官方授權，您不得存取客戶資料檔案。",
+    "collocations": ["written authorization（書面授權）", "prior authorization（事先授權）"]
+  },
+  {
+    "id": "w_244",
+    "word": "concerning",
+    "pos": "prep.",
+    "phonetic": "[kən`sɝnɪŋ]",
+    "definition": "關於～",
+    "example_en": "The legal department issued a memorandum concerning the new privacy laws.",
+    "example_zh": "法務部發布了一份關於新隱私法的備忘錄。",
+    "collocations": ["questions concerning（關於……的問題）"]
+  },
+  {
+    "id": "w_245",
+    "word": "consideration",
+    "pos": "n.",
+    "phonetic": "[kən`sɪdə`reʃən]",
+    "definition": "考慮",
+    "example_en": "Your proposal is currently under active consideration by the board.",
+    "example_zh": "您的提案目前正由董事會積極考慮中。",
+    "collocations": ["under consideration（正在考慮中）", "take into consideration（考慮到……）"]
+  },
+  {
+    "id": "w_246",
+    "word": "defensive",
+    "pos": "adj.",
+    "phonetic": "[dɪ`fɛnsɪv]",
+    "definition": "防衛的；保護的",
+    "example_en": "The company took a defensive stance after the patent lawsuit was filed.",
+    "example_zh": "提起專利訴訟後，該公司採取了防禦姿態。",
+    "collocations": ["defensive strategy（防禦策略）", "defensive action（防禦行動）"]
+  },
+  {
+    "id": "w_247",
+    "word": "depiction",
+    "pos": "n.",
+    "phonetic": "[dɪ`pɪkʃən]",
+    "definition": "描寫，敘述",
+    "example_en": "The report gives an accurate depiction of the current regulatory environment.",
+    "example_zh": "該報告對目前的監管環境給出了準確的描述。",
+    "collocations": ["accurate depiction（精準的描繪）"]
+  },
+  {
+    "id": "w_248",
+    "word": "disobedient",
+    "pos": "adj.",
+    "phonetic": "[`dɪsə`bidɪənt]",
+    "definition": "不服從的，違反的",
+    "example_en": "Disobedient staff members who break safety rules will face disciplinary action.",
+    "example_zh": "違反安全規定的不服從員工將面臨處分行動。",
+    "collocations": ["disobedient to rules（不遵守規定）"]
+  },
+  {
+    "id": "w_249",
+    "word": "endure",
+    "pos": "v.",
+    "phonetic": "[ɪn`djʊr]",
+    "definition": "忍耐，忍受",
+    "example_en": "The firm managed to endure economic hardships during the recession.",
+    "example_zh": "該公司在經濟衰退期間成功挺過了經濟困難。",
+    "collocations": ["endure hardship（忍受艱辛）"]
+  },
+  {
+    "id": "w_250",
+    "word": "exemplary",
+    "pos": "adj.",
+    "phonetic": "[ɪg`zɛmpləri]",
+    "definition": "模範的；示範的",
+    "example_en": "He received an award for his exemplary compliance record.",
+    "example_zh": "他因模範的合規紀錄而獲得獎項。",
+    "collocations": ["exemplary conduct（模範行為）", "exemplary service（卓越服務）"]
+  },
+  {
+    "id": "w_251",
+    "word": "ignore",
+    "pos": "v.",
+    "phonetic": "[ɪg`nor]",
+    "definition": "不顧，不理會，忽視",
+    "example_en": "Employees should never ignore corporate safety guidelines.",
+    "example_zh": "員工絕不應忽視公司的安全指導方針。",
+    "collocations": ["ignore warnings（忽視警告）", "ignore regulations（無視規定）"]
+  },
+  {
+    "id": "w_252",
+    "word": "illegal",
+    "pos": "adj.",
+    "phonetic": "[ɪ`ligḷ]",
+    "definition": "違法的",
+    "example_en": "Downloading copyrighted material without authorization is illegal.",
+    "example_zh": "未經授權下載受版權保護的資料是違法的。",
+    "collocations": ["illegal activity（違法活動）", "illegal transaction（非法交易）"]
+  },
+  {
+    "id": "w_253",
+    "word": "in accordance with",
+    "pos": "phr.",
+    "definition": "與～一致；依照～",
+    "example_en": "All financial statements were prepared in accordance with international standards.",
+    "example_zh": "所有財務報表均按照國際標準編製。",
+    "collocations": ["in accordance with regulations（依據法規）"]
+  },
+  {
+    "id": "w_254",
+    "word": "indecisive",
+    "pos": "adj.",
+    "phonetic": "[`ɪndɪ`saɪsɪv]",
+    "definition": "不明確的；優柔寡斷的",
+    "example_en": "Indecisive leadership can cause significant delays in major projects.",
+    "example_zh": "優柔寡斷的領導層可能會導致重大專案的嚴重延誤。",
+    "collocations": ["indecisive action（優柔寡斷的行動）"]
+  },
+  {
+    "id": "w_255",
+    "word": "justly",
+    "pos": "adv.",
+    "phonetic": "[`dʒʌstli]",
+    "definition": "正當性；應得地",
+    "example_en": "The manager acted justly when resolving disputes among employees.",
+    "example_zh": "經理在解決員工之間的爭議時表現得十分公正。",
+    "collocations": ["justly rewarded（得到應有的回報）"]
+  },
+  {
+    "id": "w_256",
+    "word": "obey",
+    "pos": "v.",
+    "phonetic": "[ə`be]",
+    "definition": "服從，遵守",
+    "example_en": "All workers are required to obey safety regulations on the job site.",
+    "example_zh": "所有工人都必須遵守工作現場的安全規定。",
+    "collocations": ["obey rules（遵守規則）", "obey the law（遵守法律）"]
+  },
+  {
+    "id": "w_257",
+    "word": "observance",
+    "pos": "n.",
+    "phonetic": "[əb`zɝvəns]",
+    "definition": "遵守",
+    "example_en": "Strict observance of environmental policies is monitored by the local authority.",
+    "example_zh": "當地主管機關監督對環保政策的嚴格遵守。",
+    "collocations": ["in observance of（為了遵守……）", "strict observance（嚴格遵守）"]
+  },
+  {
+    "id": "w_258",
+    "word": "on-site",
+    "pos": "adj.",
+    "phonetic": "[`ɑn `saɪt]",
+    "definition": "現場的，就地的",
+    "example_en": "The company provides an on-site medical clinic for all factory workers.",
+    "example_zh": "該公司為所有工廠工人提供現場醫療診所。",
+    "collocations": ["on-site inspection（實地檢查）", "on-site facilities（現場設施）"]
+  },
+  {
+    "id": "w_259",
+    "word": "penalty",
+    "pos": "n.",
+    "phonetic": "[`pɛnḷti]",
+    "definition": "處罰，罰款",
+    "example_en": "Failure to pay taxes on time will result in a heavy financial penalty.",
+    "example_zh": "未能按時繳稅將導致重大的經濟處罰。",
+    "collocations": ["severe penalty（嚴厲處罰）", "pay a penalty（繳納罰款）", "cancellation penalty（取消費/違約金）"]
+  },
+  {
+    "id": "w_260",
+    "word": "pointed",
+    "pos": "adj.",
+    "phonetic": "[`pɔɪntɪd]",
+    "definition": "（說話或表現等）尖銳的，深刻的",
+    "example_en": "The auditor asked several pointed questions about the missing records.",
+    "example_zh": "審計師就缺失的紀錄提出了幾個尖銳的問題。",
+    "collocations": ["pointed remarks（尖銳的言辭）", "pointed question（尖銳的問題）"]
+  },
+  {
+    "id": "w_261",
+    "word": "precious",
+    "pos": "adj.",
+    "phonetic": "[`prɛʃəs]",
+    "definition": "珍貴的",
+    "example_en": "Confidential client research is one of the company's most precious assets.",
+    "example_zh": "機密客戶研究是公司最珍貴的資產之一。",
+    "collocations": ["precious resource（珍貴的資源）", "precious asset（寶貴資產）"]
+  },
+  {
+    "id": "w_262",
+    "word": "principle",
+    "pos": "n.",
+    "phonetic": "[`prɪnsəpḷ]",
+    "definition": "原理，原則",
+    "example_en": "The company operates strictly on principles of transparency and fairness.",
+    "example_zh": "該公司嚴格依據透明和公平的原則營運。",
+    "collocations": ["guiding principle（指導原則）", "in principle（原則上）"]
+  },
+  {
+    "id": "w_263",
+    "word": "punishment",
+    "pos": "n.",
+    "phonetic": "[`pʌnɪʃmənt]",
+    "definition": "處罰，刑罰",
+    "example_en": "Violation of the non-disclosure agreement will result in legal punishment.",
+    "example_zh": "違反保密協議將導致法律處罰。",
+    "collocations": ["deserve punishment（應得處罰）", "severe punishment（嚴厲懲罰）"]
+  },
+  {
+    "id": "w_264",
+    "word": "regulate",
+    "pos": "v.",
+    "phonetic": "[`rɛgjə`let]",
+    "definition": "規定；調節",
+    "example_en": "Government authorities heavily regulate the pharmaceutical industry.",
+    "example_zh": "政府主管機關對製藥業進行嚴格監管。",
+    "collocations": ["regulate trade（規範貿易）", "strictly regulate（嚴格管理）"]
+  },
+  {
+    "id": "w_265",
+    "word": "restricted area",
+    "pos": "phr.",
+    "definition": "限制區",
+    "example_en": "Unauthorized staff are strictly prohibited from entering the restricted area.",
+    "example_zh": "未經授權的人員嚴禁進入限制區域。",
+    "collocations": ["enter a restricted area（進入管制區）"]
+  },
+  {
+    "id": "w_266",
+    "word": "restriction",
+    "pos": "n.",
+    "phonetic": "[rɪ`strɪkʃən]",
+    "definition": "限制，限定",
+    "example_en": "The government imposed tight trade restrictions on imported electronic goods.",
+    "example_zh": "政府對進口電子產品實施了嚴格的貿易限制。",
+    "collocations": ["impose restrictions（實施限制）", "lift restrictions（解除限制）"]
+  },
+  {
+    "id": "w_267",
+    "word": "safety inspection",
+    "pos": "phr.",
+    "definition": "安全檢查",
+    "example_en": "The factory passed the annual safety inspection with zero violations.",
+    "example_zh": "該工廠通過了年度安全檢查，零違規。",
+    "collocations": ["pass a safety inspection（通過安檢）"]
+  },
+  {
+    "id": "w_268",
+    "word": "suppress",
+    "pos": "v.",
+    "phonetic": "[sə`prɛs]",
+    "definition": "鎮壓，阻止",
+    "example_en": "The company tried to suppress negative reports about product defects.",
+    "example_zh": "該公司試圖壓制有關產品缺陷的負面報導。",
+    "collocations": ["suppress information（封鎖/壓制訊息）"]
+  },
+  {
+    "id": "w_269",
+    "word": "tensely",
+    "pos": "adv.",
+    "phonetic": "[`tɛnsli]",
+    "definition": "繃緊地，緊張地",
+    "example_en": "The board members waited tensely for the voting results of the proposal.",
+    "example_zh": "董事會成員緊張地等待提案的投票結果。",
+    "collocations": ["wait tensely（緊張地等待）"]
+  },
+  {
+    "id": "w_270",
+    "word": "unauthorized",
+    "pos": "adj.",
+    "phonetic": "[`ʌn`ɔθə`raɪzd]",
+    "definition": "未經授權的",
+    "example_en": "Unauthorized access to client confidential records will lead to dismissal.",
+    "example_zh": "未經授權存取客戶機密記錄將導致解僱。",
+    "collocations": ["unauthorized use（未授權使用）", "unauthorized personnel（未經授權人員）"]
+  },
+  {
+    "id": "w_271",
+    "word": "with respect to",
+    "pos": "phr.",
+    "definition": "關於～",
+    "example_en": "The lawyer raised several points with respect to the liability clause.",
+    "example_zh": "律師就責任條款提出了幾點意見。",
+    "collocations": ["with respect to the contract（關於合約）"]
+  },
+  {
+    "id": "w_272",
+    "word": "accuse",
+    "pos": "v.",
+    "phonetic": "[ə`kjuz]",
+    "definition": "控告，譴責",
+    "example_en": "The company was accused of violating international trade compliance laws.",
+    "example_zh": "該公司被控違反國際貿易合規法。",
+    "collocations": ["accuse someone of（控告某人……）"]
+  },
+  {
+    "id": "w_273",
+    "word": "assess",
+    "pos": "v.",
+    "phonetic": "[ə`sɛs]",
+    "definition": "評價，評估",
+    "example_en": "An independent auditor was hired to assess the company's financial status.",
+    "example_zh": "聘請了一位獨立審計師來評估公司的財務狀況。",
+    "collocations": ["assess the damages（評估損害）", "assess impact（評估影響）"]
+  },
+  {
+    "id": "w_274",
+    "word": "attorney",
+    "pos": "n.",
+    "phonetic": "[ə`tɝni]",
+    "definition": "律師",
+    "example_en": "The defense attorney presented key evidence during the afternoon trial.",
+    "example_zh": "辯護律師在下午的庭審中出示了關鍵證據。",
+    "collocations": ["corporate attorney（公司律師）", "defense attorney（辯護律師）"]
+  },
+  {
+    "id": "w_275",
+    "word": "be absent from",
+    "pos": "phr.",
+    "definition": "缺席～",
+    "example_en": "Several board members were absent from the annual general meeting.",
+    "example_zh": "幾位董事會成員缺席了股東常會。",
+    "collocations": ["be absent from work（缺勤）"]
+  },
+  {
+    "id": "w_276",
+    "word": "be allowed to do",
+    "pos": "phr.",
+    "definition": "被允許做～",
+    "example_en": "Visitors are allowed to enter the research building with a guest pass.",
+    "example_zh": "訪客持訪客證獲准進入研究大樓。",
+    "collocations": ["be allowed to enter（獲准進入）"]
+  },
+  {
+    "id": "w_277",
+    "word": "by way of",
+    "pos": "phr.",
+    "definition": "經由～，藉由～",
+    "example_en": "The notice was officially delivered to shareholders by way of email.",
+    "example_zh": "該通知已透過電子郵件正式送達給股東。",
+    "collocations": ["by way of explanation（作為解釋）"]
+  },
+  {
+    "id": "w_278",
+    "word": "distrust",
+    "pos": "v. / n.",
+    "phonetic": "[dɪs`trʌst]",
+    "definition": "不信任 / 懷疑",
+    "example_en": "Lacks of transparency created deep distrust between management and employees.",
+    "example_zh": "缺乏透明度導致管理層與員工之間產生極度不信任。",
+    "collocations": ["deep distrust（深切的不信任）"]
+  },
+  {
+    "id": "w_279",
+    "word": "from this day onward",
+    "pos": "phr.",
+    "definition": "從今天起",
+    "example_en": "From this day onward, all internal communications must follow new security rules.",
+    "example_zh": "從今天起，所有內部通訊都必須遵守新的安全規則。",
+    "collocations": ["from this day onward（從今以後）"]
+  },
+  {
+    "id": "w_280",
+    "word": "have permission to do",
+    "pos": "phr.",
+    "definition": "有做～的許可",
+    "example_en": "Only senior managers have permission to approve travel expenses.",
+    "example_zh": "只有資深經理有權批准差旅費用。",
+    "collocations": ["obtain permission to do（獲得做……的許可）"]
+  },
+  {
+    "id": "w_281",
+    "word": "in a strict way (= strictly)",
+    "pos": "phr.",
+    "definition": "嚴格地",
+    "example_en": "All fire codes are enforced in a strict way by the safety inspector.",
+    "example_zh": "安全檢查員嚴格執行所有消防法規。",
+    "collocations": ["enforced in a strict way（嚴格執行）"]
+  },
+  {
+    "id": "w_282",
+    "word": "make clear",
+    "pos": "phr.",
+    "definition": "解釋清楚",
+    "example_en": "The CEO made clear that ethical conduct is non-negotiable for all staff.",
+    "example_zh": "執行長明確指出，道德行為對所有員工來說都是不可談判的。",
+    "collocations": ["make clear that（明確表示……）"]
+  },
+  {
+    "id": "w_283",
+    "word": "ministry",
+    "pos": "n.",
+    "phonetic": "[`mɪnɪstri]",
+    "definition": "（政府的）部",
+    "example_en": "The project received approval from the Ministry of Finance yesterday.",
+    "example_zh": "該專案昨天獲得財政部的批准。",
+    "collocations": ["Ministry of Finance（財政部）", "Ministry of Labor（勞動部）"]
+  },
+  {
+    "id": "w_284",
+    "word": "newly established",
+    "pos": "phr.",
+    "definition": "新成立的",
+    "example_en": "The newly established task force will oversee corporate governance.",
+    "example_zh": "新成立的專案小組將負責監督公司治理。",
+    "collocations": ["newly established company（新成立的公司）"]
+  },
+  {
+    "id": "w_285",
+    "word": "put into effect",
+    "pos": "phr.",
+    "definition": "使生效",
+    "example_en": "The revised safety rules will be put into effect starting next Monday.",
+    "example_zh": "修訂後的安全規則將於下週一起生效。",
+    "collocations": ["put regulations into effect（使法規生效）"]
+  },
+  {
+    "id": "w_286",
+    "word": "registration confirmation",
+    "pos": "phr.",
+    "definition": "登記確認",
+    "example_en": "You will receive a registration confirmation email within twenty-four hours.",
+    "example_zh": "您將在二十四小時內收到登記確認電子郵件。",
+    "collocations": ["send registration confirmation（寄送註冊確認信）"]
+  },
+  {
+    "id": "w_287",
+    "word": "stand over",
+    "pos": "phr.",
+    "definition": "監督",
+    "example_en": "The senior technician had to stand over the apprentice during the experiment.",
+    "example_zh": "實驗過程中，資深技術員必須監督實習生。",
+    "collocations": ["stand over someone（監督某人）"]
+  },
+  {
+    "id": "w_288",
+    "word": "warn",
+    "pos": "v.",
+    "phonetic": "[wɔrn]",
+    "definition": "警告",
+    "example_en": "The HR manager warned employees against sharing passwords.",
+    "example_zh": "人資經理警告員工不要共享密碼。",
+    "collocations": ["warn against（警告不要做……）", "warn someone about（就……警告某人）"]
+  },
+  {
+    "id": "w_289",
+    "word": "without respect to",
+    "pos": "phr.",
+    "definition": "不顧～，不論～",
+    "example_en": "The safety rules apply to all workers without respect to their job rank.",
+    "example_zh": "無論職位高低，安全規則適用於所有工人。",
+    "collocations": ["without respect to rank（不論職級）"]
+  },
+  {
+    "id": "w_290",
+    "word": "commonplace",
+    "pos": "n. / adj.",
+    "phonetic": "[`kɑmən`ples]",
+    "definition": "尋常的事物 / 平凡的，普通的多益",
+    "example_en": "Remote meetings have become commonplace in international corporations.",
+    "example_zh": "遠距會議在國際公司中已變得十分尋常。",
+    "collocations": ["become commonplace（變得普遍）"]
+  },
+  {
+    "id": "w_291",
+    "word": "protective smock",
+    "pos": "phr.",
+    "definition": "防護服",
+    "example_en": "Lab technicians must wear a protective smock when handling chemicals.",
+    "example_zh": "實驗室技術人員處理化學品時必須穿著防護服。",
+    "collocations": ["wear a protective smock（穿著防護服）"]
+  },
+  {
+    "id": "w_292",
+    "word": "testimony",
+    "pos": "n.",
+    "phonetic": "[`tɛstə`moni]",
+    "definition": "證詞",
+    "example_en": "The witness provided crucial testimony during the court trial.",
+    "example_zh": "證人在庭審期間提供了關鍵證詞。",
+    "collocations": ["sworn testimony（宣誓證言）", "give testimony（作證）"]
+  },
+  {
+    "id": "w_293",
+    "word": "accordance",
+    "pos": "n.",
+    "phonetic": "[ə`kɔrdəns]",
+    "definition": "一致，符合",
+    "example_en": "The operations were conducted in accordance with strict environmental laws.",
+    "example_zh": "該作業是按照嚴格的環保法律進行的。",
+    "collocations": ["in accordance with（與……一致/依照）"]
+  },
+  {
+    "id": "w_294",
+    "word": "crucial",
+    "pos": "adj.",
+    "phonetic": "[`kruʃəl]",
+    "definition": "重要的",
+    "example_en": "Timely compliance is crucial for maintaining corporate credibility.",
+    "example_zh": "及時合規對於維持公司信譽至關重要。",
+    "collocations": ["crucial factor（關鍵因素）", "crucial role（關鍵角色）"]
+  },
+  {
+    "id": "w_295",
+    "word": "deviation",
+    "pos": "n.",
+    "phonetic": "[`divɪ`eʃən]",
+    "definition": "偏差；越軌",
+    "example_en": "Any deviation from standard protocol must be logged and reported.",
+    "example_zh": "任何偏離標準協定之處都必須記錄並上報。",
+    "collocations": ["deviation from（對……的偏差）", "standard deviation（標準差）"]
+  },
+  {
+    "id": "w_296",
+    "word": "effortlessly",
+    "pos": "adv.",
+    "phonetic": "[`ɛfɚtlɪsli]",
+    "definition": "不費力地，輕鬆地",
+    "example_en": "The experienced attorney handled the complex negotiations effortlessly.",
+    "example_zh": "這位經驗豐富的律師輕鬆處理了複雜的談判。",
+    "collocations": ["manage effortlessly（輕鬆管理）"]
+  },
+  {
+    "id": "w_297",
+    "word": "in observance of",
+    "pos": "phr.",
+    "definition": "為因應～；為了遵守～",
+    "example_en": "The office will be closed on Monday in observance of the national holiday.",
+    "example_zh": "為因應國定假日，辦公室將於週一關閉。",
+    "collocations": ["in observance of national holiday（因應國定假日）"]
+  },
+  {
+    "id": "w_298",
+    "word": "inadvertently",
+    "pos": "adv.",
+    "phonetic": "[`ɪnəd`vɝtəntli]",
+    "definition": "不慎地；不經意地",
+    "example_en": "Confidential files were inadvertently disclosed during the press briefing.",
+    "example_zh": "機密文件在記者會期間不慎被公開。",
+    "collocations": ["inadvertently delete（不小心刪除）", "inadvertently reveal（不經意洩露）"]
+  },
+  {
+    "id": "w_299",
+    "word": "judicial",
+    "pos": "adj.",
+    "phonetic": "[dʒu`dɪʃəl]",
+    "definition": "司法的，審判的",
+    "example_en": "The case is currently under judicial review by the Supreme Court.",
+    "example_zh": "該案目前正在最高法院進行司法覆核。",
+    "collocations": ["judicial system（司法體系）", "judicial review（司法覆核）"]
+  },
+  {
+    "id": "w_300",
+    "word": "justification",
+    "pos": "n.",
+    "phonetic": "[`dʒʌstəfə`keʃən]",
+    "definition": "正當化，正當理由",
+    "example_en": "The manager provided detailed justification for the budget increase.",
+    "example_zh": "經理為增加預算提供了詳細的正當理由。",
+    "collocations": ["economic justification（經濟上的正當性）", "without justification（無正當理由）"]
+  },
+  {
+    "id": "w_301",
+    "word": "keenly",
+    "pos": "adv.",
+    "phonetic": "[`kinli]",
+    "definition": "敏銳地；敏銳地；強烈地；熱心地",
+    "example_en": "Management is keenly aware of the growing competitive market pressures.",
+    "example_zh": "管理層敏銳地意識到日益增加的市場競爭壓力。",
+    "collocations": ["keenly aware of（深刻意識到……）"]
+  },
+  {
+    "id": "w_302",
+    "word": "lawsuit",
+    "pos": "n.",
+    "phonetic": "[`lɔ`sut]",
+    "definition": "訴訟",
+    "example_en": "The firm faced a massive lawsuit over alleged patent infringement.",
+    "example_zh": "該公司因涉嫌專利侵權而面臨巨額訴訟。",
+    "collocations": ["file a lawsuit（提起訴訟）", "settle a lawsuit（和解訴訟）"]
+  },
+  {
+    "id": "w_303",
+    "word": "mundane",
+    "pos": "adj.",
+    "phonetic": "[mʌn`den]",
+    "definition": "平凡的；乏味的",
+    "example_en": "Automating mundane office tasks allowed staff to focus on strategic planning.",
+    "example_zh": "將平凡乏味的辦公室任務自動化讓員工能專注於戰略規劃。",
+    "collocations": ["mundane task（繁瑣乏味的工作）"]
+  },
+  {
+    "id": "w_304",
+    "word": "off-limits",
+    "pos": "adj.",
+    "definition": "禁止進入的",
+    "example_en": "The construction site is off-limits to personnel without safety gear.",
+    "example_zh": "無安全裝備的人員嚴禁進入施工現場。",
+    "collocations": ["strictly off-limits（嚴禁進入）"]
+  },
+  {
+    "id": "w_305",
+    "word": "ordinance",
+    "pos": "n.",
+    "phonetic": "[`ɔrdənəns]",
+    "definition": "法令",
+    "example_en": "The city council passed a new local ordinance regarding noise restrictions.",
+    "example_zh": "市議會通過了一項關於噪音限制的新地方法令。",
+    "collocations": ["local ordinance（地方條例/法令）", "pass an ordinance（通過法令）"]
+  },
+  {
+    "id": "w_306",
+    "word": "pulled",
+    "pos": "adj.",
+    "phonetic": "[pʊld]",
+    "definition": "撤回的，撤銷的",
+    "example_en": "The defective product batch was pulled from store shelves immediately.",
+    "example_zh": "有缺陷的產品批次已立即從商店貨架上撤下。",
+    "collocations": ["pulled from market（從市場撤回）"]
+  },
+  {
+    "id": "w_307",
+    "word": "reprimand",
+    "pos": "v.",
+    "phonetic": "[`rɛprə`mænd]",
+    "definition": "訓斥，斥責",
+    "example_en": "The employee was reprimanded for failing to adhere to safety rules.",
+    "example_zh": "該員工因未遵守安全規則而受到訓斥。",
+    "collocations": ["severely reprimand（嚴厲訓斥）", "written reprimand（書面警告/申誡）"]
+  },
+  {
+    "id": "w_308",
+    "word": "resolution",
+    "pos": "n.",
+    "phonetic": "[`rɛzə`luʃən]",
+    "definition": "決議；決心",
+    "example_en": "The board of directors passed a formal resolution to approve the merger.",
+    "example_zh": "董事會通過了一項正式決議批准合併。",
+    "collocations": ["pass a resolution（通過決議）", "dispute resolution（爭議解決）"]
+  },
+  {
+    "id": "w_309",
+    "word": "stiff",
+    "pos": "adj.",
+    "phonetic": "[stɪf]",
+    "definition": "硬的，僵硬的；嚴厲的",
+    "example_en": "Companies face stiff penalties for non-compliance with data safety laws.",
+    "example_zh": "公司若不遵守資料安全法將面臨嚴厲的處罰。",
+    "collocations": ["stiff competition（激烈的競爭）", "stiff penalty（嚴厲處罰）"]
+  },
+  {
+    "id": "w_310",
+    "word": "substantiate",
+    "pos": "v.",
+    "phonetic": "[səb`stænʃɪ`et]",
+    "definition": "證實",
+    "example_en": "The auditor requested documents to substantiate the business expenses.",
+    "example_zh": "審計師要求出示文件以證實這些業務支出。",
+    "collocations": ["substantiate claims（證實主張/聲明）"]
+  },
+  {
+    "id": "w_311",
+    "word": "trespass",
+    "pos": "v.",
+    "phonetic": "[`trɛspəs]",
+    "definition": "侵入（別人的土地）",
+    "example_en": "Anyone who attempts to trespass on private corporate property will be prosecuted.",
+    "example_zh": "任何試圖非法侵入公司私有財產的人都將被起訴。",
+    "collocations": ["trespass on property（侵入財產）"]
+  },
+  {
+    "id": "w_312",
+    "word": "violate",
+    "pos": "v.",
+    "phonetic": "[`vaɪə`let]",
+    "definition": "違反",
+    "example_en": "Disclosing confidential source code violates the signed employment agreement.",
+    "example_zh": "洩露機密原始碼違反了簽署的僱用協議。",
+    "collocations": ["violate a law（違反法律）", "violate terms（違反條款）"]
+  },
+  {
+    "id": "w_313",
+    "word": "at the discretion of",
+    "pos": "phr.",
+    "definition": "由（某人）裁定",
+    "example_en": "Annual bonuses are granted strictly at the discretion of executive management.",
+    "example_zh": "年終獎金嚴格由高階管理層裁定發放。",
+    "collocations": ["at sole discretion of（完全由……裁定）"]
+  },
+  {
+    "id": "w_314",
+    "word": "bound",
+    "pos": "adj.",
+    "phonetic": "[baʊnd]",
+    "definition": "有義務的，一定要做什麼的",
+    "example_en": "All partners are legally bound by the non-disclosure agreement.",
+    "example_zh": "所有合夥人在法律上均受保密協議約束。",
+    "collocations": ["be legally bound（受法律約束）", "bound to do（必然會做……）"]
+  },
+  {
+    "id": "w_315",
+    "word": "circumscribe",
+    "pos": "v.",
+    "phonetic": "[`sɝkəm`skraɪb]",
+    "definition": "限制",
+    "example_en": "The authority of the interim director was strictly circumscribed by the board.",
+    "example_zh": "代理主管的權限受到了董事會的嚴格限制。",
+    "collocations": ["strictly circumscribed（受到嚴格限制）"]
+  },
+  {
+    "id": "w_316",
+    "word": "enactment",
+    "pos": "n.",
+    "phonetic": "[ɛn`æktmənt]",
+    "definition": "制定；法令",
+    "example_en": "The enactment of new environmental laws forced factories to upgrade equipment.",
+    "example_zh": "新環保法律的頒布迫使工廠升級設備。",
+    "collocations": ["enactment of legislation（法規之頒布/制定）"]
+  },
+  {
+    "id": "w_317",
+    "word": "impeccable",
+    "pos": "adj.",
+    "phonetic": "[ɪm`pɛkəbḷ]",
+    "definition": "無可挑剔的",
+    "example_en": "The firm maintains an impeccable record of regulatory compliance.",
+    "example_zh": "該公司保持著無可挑剔的法規合規紀錄。",
+    "collocations": ["impeccable record（無瑕疵的紀錄）", "impeccable conduct（無可挑剔的行為）"]
+  },
+  {
+    "id": "w_318",
+    "word": "infringement",
+    "pos": "n.",
+    "phonetic": "[ɪn`frɪndʒmənt]",
+    "definition": "侵害",
+    "example_en": "The tech company filed a lawsuit over copyright infringement.",
+    "example_zh": "該科技公司針對侵犯版權的行為提起了訴訟。",
+    "collocations": ["copyright infringement（版權侵害）", "patent infringement（專利侵權）"]
+  },
+  {
+    "id": "w_319",
+    "word": "legitimate",
+    "pos": "adj.",
+    "phonetic": "[lɪ`dʒɪtəmət]",
+    "definition": "合法的；正當的",
+    "example_en": "The auditor verified that all claimed expenses were legitimate business costs.",
+    "example_zh": "審計師核實了所有申報的費用均為合法的業務支出。",
+    "collocations": ["legitimate concern（合情合理的擔憂）", "legitimate business（合法商業）"]
+  },
+  {
+    "id": "w_320",
+    "word": "petition",
+    "pos": "n.",
+    "phonetic": "[pə`tɪʃən]",
+    "definition": "請願書",
+    "example_en": "Employees submitted a formal petition requesting flexible working hours.",
+    "example_zh": "員工提交了一份正式請願書請求彈性工作時間。",
+    "collocations": ["file a petition（提交請願書）", "sign a petition（連署請願）"]
+  },
+  {
+    "id": "w_321",
+    "word": "when it comes to",
+    "pos": "phr.",
+    "definition": "說到～，關於～",
+    "example_en": "When it comes to legal compliance, the company takes zero risks.",
+    "example_zh": "說到法律合規，該公司絕不冒任何風險。",
+    "collocations": ["when it comes to safety（談到安全時）"]
+  }
 ]
+}
+]
+  
