@@ -42,30 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. 讀取 words.json 資料並顯示主題 📚
-    fetch('words.json')
-        .then(response => response.json())
-        .then(data => { 
-            const topicList = document.getElementById('topic-list');
-            if (!topicList) return;
-
-            topicList.innerHTML = ''; // 清空舊內容
-            data.forEach(topic => {
-                const card = document.createElement('div');
-                card.className = 'topic-card';
-                card.innerHTML = `
-                    <h3>${topic.topic_title}</h3>
-                    <p>${topic.description}</p>
-                `;
-
-                card.addEventListener('click', () => {
-                    showWordList(topic);
-                });
-
-                topicList.appendChild(card);
-            });
-        })
-        .catch(error => console.error('抓取資料失敗：', error));
+    // 替換原本的 fetch 區塊
+fetch('words.json')
+    .then(response => response.text()) // ⚠️ 先轉成純文字，不要直接 .json()
+    .then(text => {
+        // ✨ 神奇魔法：把所有「隱形特殊空白」強制替換成「正常的空白」
+        const cleanText = text.replace(/\u00a0/g, ' ').trim(); 
+        const data = JSON.parse(cleanText); // 清理乾淨後再解析成 JSON
+        
+        console.log("資料抓取成功！", data);
+        
+        // 這裡放你原本成功抓到資料後要執行的程式碼
+        // 例如： renderTopics(data); 或 wordsData = data; 等等
+        
+    })
+    .catch(error => {
+        console.error("抓取資料失敗：", error);
+    });
 
     // 4. 首頁按鈕綁定 🚀
     const startBtn = document.getElementById('start-btn');
