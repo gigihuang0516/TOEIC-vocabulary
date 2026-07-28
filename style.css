@@ -487,35 +487,75 @@ html, body {
   background-color: #000736 !important;
   padding: 40px 10% !important;
   box-sizing: border-box;
-  
-  /* ✨ 關鍵修復：改用 flex 欄位排版，確保內容從最上方開始往下排 */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* 強制內容從頂部開始對齊，不往下掉 */
 }
 
-/* 頂部 Header 區域 */
+/* 頂部 Header 區域 (確保橫向彈性佈局) */
 .fav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 30px auto; /* 與下方單字卡片保持 30px 間距 */
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto 30px auto !important;
 }
 
+/* 左側區塊：橫向/縱向排列修正 */
 .fav-header-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: auto !important; /* 防止被擠壓變成直書 */
 }
 
-/* 收藏單字清單容器 (緊接著 Header 往下排) */
+/* 🏆 白底圓角膠囊按鈕 (強行修正直向斷行問題) */
+button#back-from-fav-btn,
+.capsule-btn {
+  background-color: #ffffff !important;
+  color: #000736 !important;
+  border: none !important;
+  padding: 8px 20px !important;
+  border-radius: 20px !important;
+  font-size: 0.95rem !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+  transition: all 0.2s ease !important;
+  
+  /* ✨ 關鍵修正：禁止換行，確保文字永遠橫向維持一整列 */
+  white-space: nowrap !important;
+  display: inline-block !important;
+}
+
+button#back-from-fav-btn:hover,
+.capsule-btn:hover {
+  background-color: #cbe3ff !important;
+  transform: scale(1.03) !important;
+}
+
+/* 我的收藏大標題 (確保橫向顯示) */
+.fav-header-left h2 {
+  color: #ffffff !important;
+  font-size: 2.8rem !important;
+  font-weight: 800 !important;
+  margin: 0 !important;
+  letter-spacing: 1px !important;
+  white-space: nowrap !important; /* 防止標題斷行變直書 */
+}
+
+/* 右上角書本圖片 */
+.fav-book-img {
+  width: 110px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* 單字卡片列表容器 */
 #favorites-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto; /* 居中對齊 */
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
 }
