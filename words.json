@@ -1,22 +1,410 @@
 [
   {
-    "topic_id": "recruitment",
+    "topic_id": "topic_01",
     "topic_title": "招募、面試與聘僱",
     "description": "包含職缺公告，面試流程與聘僱合約相關詞彙",
     "words": [
       {
+        "id":"w_001"
         "word": "resume",
         "pos": "n.",
         "phonetic": "[rɛzʊmɛ]",
         "definition": "履歷表",
         "example_en": "Applicants are required to submit an updated resume along with three professional references.",
         "example_zh": "應徵者須提交最新版本的履歷表以及三份專業推薦人資料。",
-        "collocations": [
-          "submit a resume（遞交履歷）",
-          "updated resume（最新履歷）",
-          "tailor a resume（量身打造履歷）"
-        ]
-      }
-    ]
+        "collocations": ["submit a resume（遞交履歷）","updated resume（最新履歷）","tailor a resume（量身打造履歷）"]
+      },
+    
+  {
+    "id": "w_002",
+    "word": "opening",
+    "pos": "n.",
+    "phonetic": "[`opənɪŋ]",
+    "definition": "空缺，職缺；開張",
+    "example_en": "The HR department announced an opening for a senior data analyst.",
+    "example_zh": "人力資源部宣布了一個高級數據分析師的職缺。",
+    "collocations": ["job opening（工作職缺）", "immediate opening（急徵職缺）", "grand opening（盛大開幕）"]
+  },
+  {
+    "id": "w_003",
+    "word": "applicant",
+    "pos": "n.",
+    "phonetic": "[`æpləkənt]",
+    "definition": "申請者；應徵者",
+    "example_en": "All qualified applicants will be invited for an online interview next week.",
+    "example_zh": "所有符合資格的應徵者將獲邀參加下週的線上面試。",
+    "collocations": ["successful applicant（錄取者）", "job applicant（求職者）", "applicant tracking system（應徵者追蹤系統）"]
+  },
+  {
+    "id": "w_004",
+    "word": "requirement",
+    "pos": "n.",
+    "phonetic": "[rɪ`kwaɪrmənt]",
+    "definition": "必要條件；要求",
+    "example_en": "Fluency in English is a mandatory requirement for this international sales position.",
+    "example_zh": "流利的英文能力是這個國際業務職缺的必要條件。",
+    "collocations": ["meet the requirements（符合要求）", "minimum requirement（最低門檻）", "entry requirement（入職要求）"]
+  },
+  {
+    "id": "w_005",
+    "word": "meet",
+    "pos": "v.",
+    "phonetic": "[mit]",
+    "definition": "滿足，符合（要求、條件等）",
+    "example_en": "The candidate has failed to meet the basic qualifications for the post.",
+    "example_zh": "該候選人未能達到該職位要求的基本資格。",
+    "collocations": ["meet the demand（滿足需求）", "meet deadlines（趕上截止日期）", "meet expectations（符合預期）"]
+  },
+  {
+    "id": "w_006",
+    "word": "qualified",
+    "pos": "adj.",
+    "phonetic": "[`kwɑlə`faɪd]",
+    "definition": "有資格的；勝任的",
+    "example_en": "She is highly qualified to manage the new marketing project.",
+    "example_zh": "她非常有資格來管理這個新的行銷專案。",
+    "collocations": ["highly qualified（非常資深的/合適的）", "be qualified for（具備……資格）", "qualified candidate（合格的候選人）"]
+  },
+  {
+    "id": "w_007",
+    "word": "candidate",
+    "pos": "n.",
+    "phonetic": "[`kændədət]",
+    "definition": "候選人；應徵者",
+    "example_en": "We will interview the top three candidates for the branch manager position tomorrow.",
+    "example_zh": "我們明天將面試分行經理職位的 前三名候選人。",
+    "collocations": ["ideal candidate（理想人選）", "shortlisted candidate（決選名單候選人）", "potential candidate（潛在候選人）"]
+  },
+  {
+    "id": "w_008",
+    "word": "confidence",
+    "pos": "n.",
+    "phonetic": "[`kɑnfədəns]",
+    "definition": "信心，自信；信任",
+    "example_en": "The board expressed full confidence in the CEO's expansion strategy.",
+    "example_zh": "董事會對執行長的擴張策略表達了充分的信心。",
+    "collocations": ["express confidence in（對……表達信心）", "build confidence（建立自信）", "in strict confidence（嚴格保密地）"]
+  },
+  {
+    "id": "w_009",
+    "word": "highly",
+    "pos": "adv.",
+    "phonetic": "[`haɪli]",
+    "definition": "很，非常",
+    "example_en": "The new software update is highly recommended by technical experts.",
+    "example_zh": "這款新軟體更新獲得了技術專家的高度推薦。",
+    "collocations": ["highly competitive（非常有競爭力的）", "highly successful（非常成功的）", "speak highly of（對……高度評價）"]
+  },
+  {
+    "id": "w_010",
+    "word": "professional",
+    "pos": "adj. / n.",
+    "phonetic": "[prə`fɛʃənḷ]",
+    "definition": "專業的 / 專家",
+    "example_en": "All team members are expected to maintain a professional attitude at work.",
+    "example_zh": "所有團隊成員都被期待在工作場合保持專業的態度。",
+    "collocations": ["professional experience（專業經驗）", "professional conduct（專業操守）", "seasoned professional（資深專家）"]
+  },
+  {
+    "id": "w_011",
+    "word": "interview",
+    "pos": "n. / v.",
+    "phonetic": "[`ɪntɚ`vju]",
+    "definition": "面試 / 面談",
+    "example_en": "The hiring manager will conduct a second-round interview on Thursday.",
+    "example_zh": "招募經理將於星期四主持第二輪面試。",
+    "collocations": ["conduct an interview（進行面試）", "job interview（求職面試）", "interviewee（受面試者）"]
+  },
+  {
+    "id": "w_012",
+    "word": "hire",
+    "pos": "v.",
+    "phonetic": "[haɪr]",
+    "definition": "僱用",
+    "example_en": "The company plans to hire ten new engineers to speed up software development.",
+    "example_zh": "該公司計劃僱用十名新工程師以加速軟體開發。",
+    "collocations": ["new hire（新進員工）", "hire temporary staff（僱用臨時員工）", "hiring freeze（凍結人事招募）"]
+  },
+  {
+    "id": "w_013",
+    "word": "training",
+    "pos": "n.",
+    "phonetic": "[`trenɪŋ]",
+    "definition": "訓練，培訓",
+    "example_en": "New employees must complete a mandatory two-week training program.",
+    "example_zh": "新員工必須完成為期兩週的強制性培訓課程。",
+    "collocations": ["on-the-job training（在職訓練）", "training session（培訓課程）", "provide training（提供培訓）"]
+  },
+  {
+    "id": "w_014",
+    "word": "reference",
+    "pos": "n.",
+    "phonetic": "[`rɛfərəns]",
+    "definition": "推薦信；參考",
+    "example_en": "Please include the contact details of two former supervisors as your references.",
+    "example_zh": "請附上兩位前任主管的聯絡方式作為您的推薦人。",
+    "collocations": ["reference letter（推薦信）", "check references（確認推薦人資歷）", "for future reference（供日後參考）"]
+  },
+  {
+    "id": "w_015",
+    "word": "position",
+    "pos": "n. / v.",
+    "phonetic": "[pə`zɪʃən]",
+    "definition": "職位；位置 / 放置",
+    "example_en": "She was recently promoted to a management position within the sales division.",
+    "example_zh": "她最近升任為銷售部門的管理職位。",
+    "collocations": ["open position（職缺）", "apply for a position（應徵職位）", "executive position（高階管理職）"]
+  },
+  {
+    "id": "w_016",
+    "word": "achievement",
+    "pos": "n.",
+    "phonetic": "[ə`tʃivmənt]",
+    "definition": "成就；達成",
+    "example_en": "Completing the complex project ahead of schedule was a major achievement for the team.",
+    "example_zh": "提前完成這個複雜的專案是該團隊的一項重大成就。",
+    "collocations": ["sense of achievement（成就感）", "key achievement（主要成就）", "outstanding achievement（傑出成就）"]
+  },
+  {
+    "id": "w_017",
+    "word": "impressed",
+    "pos": "adj.",
+    "phonetic": "[ɪm`prɛst]",
+    "definition": "感到印象深刻的",
+    "example_en": "The interview panel was favorably impressed by the candidate's presentation.",
+    "example_zh": "面試小組對該應徵者的簡報印象非常深刻。",
+    "collocations": ["be impressed with/by（對……印象深刻）", "deeply impressed（印象極其深刻）"]
+  },
+  {
+    "id": "w_018",
+    "word": "excellent",
+    "pos": "adj.",
+    "phonetic": "[`ɛksələnt]",
+    "definition": "優秀的，傑出的",
+    "example_en": "The candidate has an excellent track record in increasing annual sales.",
+    "example_zh": "該候選人在提升年度銷售額方面擁有優秀的過往紀錄。",
+    "collocations": ["excellent communication skills（優秀的溝通技巧）", "excellent performance（傑出的表現）"]
+  },
+  {
+    "id": "w_019",
+    "word": "eligible",
+    "pos": "adj.",
+    "phonetic": "[`ɛlɪdʒəbḷ]",
+    "definition": "有資格的；合適的",
+    "example_en": "Employees who complete one year of service are eligible for annual bonuses.",
+    "example_zh": "服務滿一年的員工有資格獲得年度獎金。",
+    "collocations": ["be eligible for（有資格獲得……）", "be eligible to do（有資格去做……）", "eligible candidate（符合條件的人選）"]
+  },
+  {
+    "id": "w_020",
+    "word": "identify",
+    "pos": "v.",
+    "phonetic": "[aɪ`dɛntə`faɪ]",
+    "definition": "辨認，認出",
+    "example_en": "The audit team was able to identify several areas for cost reduction.",
+    "example_zh": "審計團隊能夠找出幾個可以降低成本的領域。",
+    "collocations": ["identify potential risks（識別潛在風險）", "identify solutions（尋找解決方案）", "identify with（認同/產生共鳴）"]
+  },
+  {
+    "id": "w_021",
+    "word": "associate",
+    "pos": "v. / n. / adj.",
+    "phonetic": "[ə`soʃɪ`et]",
+    "definition": "使有關聯 / 同事 / 副的",
+    "example_en": "Many people associate high prices with superior quality.",
+    "example_zh": "許多人會將高價格與優良品質聯繫在一起。",
+    "collocations": ["be associated with（與……有關聯）", "business associate（商業夥伴）", "associate director（副總監）"]
+  },
+  {
+    "id": "w_022",
+    "word": "condition",
+    "pos": "n.",
+    "phonetic": "[kən`dɪʃən]",
+    "definition": "條件；狀況",
+    "example_en": "Working under safe and fair conditions is a fundamental right for all staff.",
+    "example_zh": "在安全且公平的條件下工作是所有員工的基本權利。",
+    "collocations": ["working conditions（工作條件/環境）", "terms and conditions（條款與條件）", "in critical condition（狀況危急）"]
+  },
+  {
+    "id": "w_023",
+    "word": "employment",
+    "pos": "n.",
+    "phonetic": "[ɪm`plɔɪmənt]",
+    "definition": "僱用；就業",
+    "example_en": "The government released new statistics showing a steady increase in full-time employment.",
+    "example_zh": "政府公布了最新的統計數據，顯示全職就業人口穩定增長。",
+    "collocations": ["employment contract（僱用合約）", "employment opportunity（就業機會）", "termination of employment（解僱/終止僱用）"]
+  },
+  {
+    "id": "w_024",
+    "word": "lack",
+    "pos": "v. / n.",
+    "phonetic": "[læk]",
+    "definition": "缺乏，不足",
+    "example_en": "The project was delayed due to a total lack of technical resources.",
+    "example_zh": "該專案因完全缺乏技術資源而延誤。",
+    "collocations": ["lack of experience（缺乏經驗）", "lack confidence（缺乏信心）", "for lack of（因缺乏……）"]
+  },
+  {
+    "id": "w_025",
+    "word": "managerial",
+    "pos": "adj.",
+    "phonetic": "[`mænə`dʒɪrɪəl]",
+    "definition": "管理的",
+    "example_en": "Applicants should have at least five years of managerial experience in retail.",
+    "example_zh": "應徵者應具備至少五年零售業的管理經驗。",
+    "collocations": ["managerial position（管理職位）", "managerial skills（管理能力）", "managerial responsibilities（管理職責）"]
+  },
+  {
+    "id": "w_026",
+    "word": "diligent",
+    "pos": "adj.",
+    "phonetic": "[`dɪlədʒənt]",
+    "definition": "勤奮的",
+    "example_en": "Through diligent research, the team was able to solve the technical issue.",
+    "example_zh": "透過勤奮的研究，團隊成功解決了該項技術難題。",
+    "collocations": ["diligent worker（勤奮的員工）", "diligent efforts（不懈的努力）"]
+  },
+  {
+    "id": "w_027",
+    "word": "familiar",
+    "pos": "adj.",
+    "phonetic": "[fə`mɪljɚ]",
+    "definition": "熟悉的，親近的",
+    "example_en": "New staff should become familiar with the safety procedures as soon as possible.",
+    "example_zh": "新員工應儘快熟悉安全操作程序。",
+    "collocations": ["be familiar with（對……熟悉）", "familiarize oneself with（使自己熟悉）"]
+  },
+  {
+    "id": "w_028",
+    "word": "proficiency",
+    "pos": "n.",
+    "phonetic": "[prə`fɪʃənsi]",
+    "definition": "熟練，精通",
+    "example_en": "Candidates must demonstrate proficiency in both English and Mandarin.",
+    "example_zh": "應徵者必須展現精通英文與中文的能力。",
+    "collocations": ["language proficiency（語言能力精通度）", "demonstrate proficiency（展示熟練度）"]
+  },
+  {
+    "id": "w_029",
+    "word": "prospective",
+    "pos": "adj.",
+    "phonetic": "[prə`spɛktɪv]",
+    "definition": "預期的；未來的",
+    "example_en": "The company sent promotional brochures to prospective clients across the region.",
+    "example_zh": "該公司向該地區的潛在客戶寄送了宣傳手冊。",
+    "collocations": ["prospective employer（未來的雇主）", "prospective client（潛在客戶）", "prospective buyer（預期買家）"]
+  },
+  {
+    "id": "w_030",
+    "word": "appeal",
+    "pos": "v. / n.",
+    "phonetic": "[ə`pil]",
+    "definition": "呼籲；有吸引力 / 吸引力",
+    "example_en": "The flexible work policy really appeals to younger job seekers.",
+    "example_zh": "彈性的工作政策對年輕求職者非常有吸引力。",
+    "collocations": ["appeal to（對……有吸引力；向……呼籲）", "broad appeal（廣泛的吸引力）"]
+  },
+  {
+    "id": "w_031",
+    "word": "specialize",
+    "pos": "v.",
+    "phonetic": "[`spɛʃəl`aɪz]",
+    "definition": "專攻，專門從事",
+    "example_en": "Our agency specializes in recruiting high-level tech executives.",
+    "example_zh": "我們的機構專攻於招募高階科技主管。",
+    "collocations": ["specialize in（專精於……）"]
+  },
+  {
+    "id": "w_032",
+    "word": "apprehensive",
+    "pos": "adj.",
+    "phonetic": "[`æprɪ`hɛnsɪv]",
+    "definition": "擔心的，憂慮的",
+    "example_en": "Many employees felt apprehensive about the upcoming company restructuring.",
+    "example_zh": "許多員工對即將到來的公司重組感到不安。",
+    "collocations": ["feel apprehensive about（對……感到擔憂）"]
+  },
+  {
+    "id": "w_033",
+    "word": "consultant",
+    "pos": "n.",
+    "phonetic": "[kən`sʌltənt]",
+    "definition": "顧問",
+    "example_en": "We hired a financial consultant to optimize our operational expenses.",
+    "example_zh": "我們聘請了一位財務顧問來優化我們的營運支出。",
+    "collocations": ["management consultant（管理顧問）", "act as a consultant（擔任顧問）"]
+  },
+  {
+    "id": "w_034",
+    "word": "entitle",
+    "pos": "v.",
+    "phonetic": "[ɛn`taɪtḷ]",
+    "definition": "給予（某人）權利/資格",
+    "example_en": "This pass entitles the holder to free entry for all workshops.",
+    "example_zh": "這張通行證賦予持有人免費參加所有研討會的權利。",
+    "collocations": ["be entitled to（有權獲得……）", "be entitled to do（有權去做……）"]
+  },
+  {
+    "id": "w_035",
+    "word": "degree",
+    "pos": "n.",
+    "phonetic": "[dɪ`gri]",
+    "definition": "學位；程度",
+    "example_en": "Applicants must hold a bachelor's degree in business administration.",
+    "example_zh": "應徵者必須擁有企業管理學士學位。",
+    "collocations": ["bachelor's degree（學士學位）", "master's degree（碩士學位）", "to a certain degree（在某種程度上）"]
+  },
+  {
+    "id": "w_036",
+    "word": "payroll",
+    "pos": "n.",
+    "phonetic": "[`pe`rol]",
+    "definition": "薪水帳冊；發薪名單",
+    "example_en": "The finance department is responsible for processing the monthly payroll.",
+    "example_zh": "財務部負責處理每月的發薪事宜。",
+    "collocations": ["on the payroll（列入發薪名單；在職）", "payroll system（薪酬系統）"]
+  },
+  {
+    "id": "w_037",
+    "word": "recruit",
+    "pos": "v. / n.",
+    "phonetic": "[rɪ`krut]",
+    "definition": "招募（新進人員） / 新進人員",
+    "example_en": "The HR team travels to major universities every spring to recruit top talent.",
+    "example_zh": "人資團隊每年春天都會前往各大大學招募優秀人才。",
+    "collocations": ["recruit new talent（招募新人）", "new recruit（新進員工）", "recruitment agency（人力仲介公司）"]
+  },
+  {
+    "id": "w_038",
+    "word": "certification",
+    "pos": "n.",
+    "phonetic": "[`sɝtəfə`keʃən]",
+    "definition": "（資格）證明，執照",
+    "example_en": "Obtaining a project management certification can boost your career prospects.",
+    "example_zh": "獲得專案管理認證可以提升你的職涯前景。",
+    "collocations": ["professional certification（專業認證）", "obtain certification（取得認證）"]
+  },
+  {
+    "id": "w_039",
+    "word": "occupation",
+    "pos": "n.",
+    "phonetic": "[`ɑkjə`peʃən]",
+    "definition": "職業",
+    "example_en": "Please state your name, age, and occupation on the form.",
+    "example_zh": "請在表格上註明您的姓名、年齡與職業。",
+    "collocations": ["current occupation（現職）", "choose an occupation（選擇職業）"]
+  },
+  {
+    "id": "w_040",
+    "word": "wage",
+    "pos": "n.",
+    "phonetic": "[wedʒ]",
+    "definition": "工資，薪水（通常指按小時或每週計算者）",
+    "example_en": "The government has decided to raise the minimum hourly wage starting next month.",
+    "example_zh": "政府決定從下個月開始調升每小時最低工資。",
+    "collocations": ["minimum wage（最低工資）", "hourly wage（時薪）", "wage gap（薪資差距）"]
   }
+ ]
+ }
 ]
