@@ -42,23 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 替換原本的 fetch 區塊
-fetch('words.json')
-    .then(response => response.text()) // ⚠️ 先轉成純文字，不要直接 .json()
-    .then(text => {
-        // ✨ 神奇魔法：把所有「隱形特殊空白」強制替換成「正常的空白」
-        const cleanText = text.replace(/\u00a0/g, ' ').trim(); 
-        const data = JSON.parse(cleanText); // 清理乾淨後再解析成 JSON
-        
-        console.log("資料抓取成功！", data);
-        
-        // 這裡放你原本成功抓到資料後要執行的程式碼
-        // 例如： renderTopics(data); 或 wordsData = data; 等等
-        
-    })
-    .catch(error => {
-        console.error("抓取資料失敗：", error);
-    });
+// 替換原本的 fetch 區塊
+    fetch('words.json')
+        .then(response => response.text()) // ⚠️ 先轉成純文字，不要直接 .json()
+        .then(text => {
+            // ✨ 神奇魔法：把所有「隱形特殊空白」強制替換成「正常的空白」
+            const cleanText = text.replace(/\u00a0/g, ' ').trim(); 
+            const data = JSON.parse(cleanText); // 清理乾淨後再解析成 JSON
+            
+            console.log("資料抓取成功！", data);
+            
+            // 🚀 關鍵修正：呼叫函式把主題渲染到畫面上！
+            renderTopics(data);
+            
+        })
+        .catch(error => {
+            console.error("抓取資料失敗：", error);
+        });
 
     // 4. 首頁按鈕綁定 🚀
     const startBtn = document.getElementById('start-btn');
