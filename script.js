@@ -351,3 +351,32 @@ function toggleListFavorite(word, btnElement) {
         }
     });
 }
+// ==============================
+// 📚 渲染主題列表函式
+// ==============================
+function renderTopics(data) {
+    const topicListContainer = document.getElementById('topic-list');
+    if (!topicListContainer) return;
+    
+    topicListContainer.innerHTML = ''; // 清空原本內容
+
+    data.forEach(topic => {
+        // 建立每個主題的卡片
+        const card = document.createElement('div');
+        card.className = 'topic-card'; // 如果你有寫 CSS 可以用這個 class
+        card.style.cssText = "background: #fff; padding: 20px; margin-bottom: 15px; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1);";
+        
+        card.innerHTML = `
+            <h3 style="margin: 0 0 8px 0; color: #333;">${topic.topic_title}</h3>
+            <p style="margin: 0; color: #666; font-size: 0.9rem;">${topic.description}</p>
+            <span style="display: inline-block; margin-top: 10px; font-size: 0.8rem; color: #007bff;">包含 ${topic.words.length} 個單字 →</span>
+        `;
+
+        // 點擊主題卡片後，進入該主題的單字列表
+        card.addEventListener('click', () => {
+            showWordList(topic);
+        });
+
+        topicListContainer.appendChild(card);
+    });
+}
